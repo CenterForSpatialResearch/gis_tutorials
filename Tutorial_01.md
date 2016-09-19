@@ -4,7 +4,7 @@
 
 This tutorial will cover some basics of the ArcMap user interface, using map symbology, and creating a map layout.
 
-[t1-1.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_01/t1-1.png)
+![t1-1.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_01/t1-1.png)
 
 1) Open ArcMap. Go to `Start` > `Programs` > `ArcGIS` > `ArcMap`. A dialogue box should appear, as below. To start a new map project, select `Blank Map` and click `OK`.
 
