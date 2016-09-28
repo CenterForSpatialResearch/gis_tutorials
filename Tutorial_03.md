@@ -26,7 +26,7 @@ Most of the time after finishing your map in GIS you will still want to do some 
 
 * Finally, if one of your layers has too many vertices, Illustrator will rasterize it no matter what. Unfortunately, there is no way around this.
 
-![t3-2.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_03/t3_2.PNG)
+![t3-2.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_03/t3_2.png)
 
 Once in Illustrator you will notice that your layers will have been grouped and that a clipping mask will have been created for each piece of geometry. You can always release the clipping masks manually, but generally there are too many objects in the map to make this feasible. The quickest solution is to select an object in a layer using the `Direct Selection Tool` (the white arrow - this will select the geometry and not the clipping mask). From the `Select` drop-down menu, go to `Same` > `Appearance` (for this to work correctly, each layer must have been exported with different colors from ArcGIS).
 
