@@ -1,6 +1,6 @@
 ## Using Bluesky Aerial Orthophotos
 
-*Tutorial created by Jonathan Izen (jai2125@colubia.edu)*
+*Tutorial created by Jonathan Izen (jai2125@columbia.edu)*
 
 Below are intructions on how to use the 2003 Bluesky Orthophoto aerial photographs of New York City.
 
@@ -36,6 +36,6 @@ To correct the spatial reference:
 
 * Click `Import,` then navigate to the `Ortho_Index` shapefile you copied. Select the `ortho_index` file, and click `Add`. This will assign your raster .jpg file the same spatial reference as the shapefile.
 
-*Click `OK` to the remaining dialogue boxes.
+* Click `OK` to the remaining dialogue boxes.
 
 * Add the .jpg raster to your ArcMap project. It should now fit neatly into the index shapefile, and be ready for your use.
