@@ -20,7 +20,7 @@ Usually, it is helpful to know the path that ArcMap is following to find the dat
 
 The last known path for the data layer is displayed after `Location` in the `Data Source` box.
 
-![t4-3.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_04/t4_3.PNG)
+![t4-3.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_04/t4_3.png)
 
 You can reset the data source (i.e. create a new path and fix the broken link) by clicking the `Set Data Source` button on the lower right. (Note: You can short-cut to resetting the data source by double-clicking on the red exclamation point next to the data layer's name in the `Table of Contents`.)
 
