@@ -8,7 +8,7 @@ This tutorial will guide you through the process of exporting GIS shapefiles for
 
 1) Create a map with the layers that you want to export.
 
-![t2-2.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_02/t2_2.PNG)
+![t2-2.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_02/t2_2.png)
 
 2) Right-click on one of the layers that you want to export to CAD, and choose `Data`, `Export to CAD`.
 
@@ -16,7 +16,7 @@ This tutorial will guide you through the process of exporting GIS shapefiles for
 
 3) Choose from the drop-down menu named `Input Features` all the layers that you want to export. 
 
-![t2-4.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_02/t2_4.PNG)
+![t2-4.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_02/t2_4.png)
 
 You may choose DGW_R2004 as file type, just in case the computer you are going to open the files on doesn’t have the latest version of CAD. Also, remember to always choose a destination location; otherwise GIS will choose a path for you and it will become difficult to locate your files.
 
