@@ -20,16 +20,16 @@ Usually, it is helpful to know the path that ArcMap is following to find the dat
 
 The last known path for the data layer is displayed after `Location` in the `Data Source` box.
 
-![t4-3.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_04/t4_3.PNG)
+![t4-3.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_04/t4_4.PNG)
 
 You can reset the data source (i.e. create a new path and fix the broken link) by clicking the `Set Data Source` button on the lower right. (Note: You can short-cut to resetting the data source by double-clicking on the red exclamation point next to the data layer's name in the `Table of Contents`.)
 
 The dialogue below (`Data Source`) will appear. Navigate to your data file and click `Add`. Click `OK` in the `Layer Properties` dialogue box.
 
-![t4-5.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_04/t4_4.PNG)
+![t4-5.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_04/t4_5.PNG)
 
 Your broken link should now be repaired, and your data layer should now be visible in your map project.
 
-![t4-6.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_04/t4_5.PNG)
+![t4-6.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_04/t4_6.PNG)
 
 It is good practice to save your map while storing relative pathnames to data sources. To do so, go to `File` > `Map Document Properties`. Make sure the checkbox near the bottom for `Pathnames` is checked, asking if you want to store relative pathnames to data sources. If this is enabled, the next time you save your map, the links to the data layers will be preserved.
