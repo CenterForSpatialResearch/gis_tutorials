@@ -1,4 +1,4 @@
-## Creating a 3D Site Model in GIS
+# Creating a 3D Site Model in GIS
 
 The purpose of this tutorial is to introduce and explore surface data analysis using a vector data model: TIN (Triangulated Irregular Network). We will load the 3D Analyst Analyst extension, create an elevation model and activate a 3D software browser: ArcScene.
 
@@ -23,7 +23,7 @@ We will also create contours from our raster file that will help build a 3D surf
 
 Now you need to switch to ArcScene, the 3D version of ArcMap. Open ArcScene and add the layers that you just created.
 
-# Importing Contours with Base Heights
+## Importing Contours with Base Heights
 
 Launch ArcScene and add the 10 foot Contours we made as a layer.
 
@@ -37,7 +37,7 @@ Use the expression builder (Calculator Icon) to select the `Contour` attribute f
 
 Click `OK`, and you'll see the contours are now displayed in 3D.
 
-# Creating a TIN Using Contours
+## Creating a TIN Using Contours
 
 TINs (or Triangulated Irregular Networks) are representations of 3D surfaces that use a set of contiguous, non-overlapping triangles to describe a geographic surface.
 
@@ -60,7 +60,7 @@ Choose the `Softline` option here as the contour lines are representations of gr
 
 Click `OK` and the TIN is created. After a few minutes (depending on the speed and memory of your computer), the TIN should display in ArcScene, and you have your first digital terrain model.
 
-# Thematic Display of TINs
+## Thematic Display of TINs
 
 ArcScene allows you to change the symbology of your TINs to reflect percentage slope, slope aspect, elevation, etc. The process is very similar to changing the symbology of a layer in ArcMap. Right click on the tin layer and choose Properties. Then click on the Symbology tab.
 
@@ -80,7 +80,7 @@ Now, experiment with different themes. Try displaying the TIN with slope percent
 
 With Elevation loaded and checked, uncheck the Edge Types and Faces and click `OK` to exit out of the Properties menu and view the result.
 
-# Draping Layers on Your TIN
+## Draping Layers on Your TIN
 
 ArcScene allows you to drape other layers on top of your TIN or raster images. For example, you can drape the streets layer to give the streets a Z value. Or you can drape an orthophoto of the area.
 
@@ -104,7 +104,7 @@ Then, right-click on the layer and go to `Properties`. Here go to the `Extrusion
 
 You can also change the way ArcScene handles shadows, lighting, and even the background color. Right click on `Scene Layers` and click on `Scene Properties`. Here you can use the `Illumination` tab to deal with shading by changing the Azimuth and Altitude specifications.
 
-# Draping an Ortho Image on Your TIN
+## Draping an Ortho Image on Your TIN
 
 ![t9-15.png](URL)
 

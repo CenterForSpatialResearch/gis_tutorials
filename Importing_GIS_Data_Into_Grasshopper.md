@@ -1,4 +1,4 @@
-## Importing GIS Data into Grasshopper
+# Importing GIS Data into Grasshopper
 
 This tutorial will cover some basic techniques for importing GIS data into Rhino—using the Grasshopper plugin—in order to create a 3D site model with basic building masses. This method generates NURBS geometry in Rhino, allowing you to use features like Make2D to export vector graphics.
 
@@ -6,7 +6,7 @@ This tutorial uses the TT Toolbox plugin for Grasshopper to read Excel spreadshe
 
 TT Toolbox can be downloaded [here](http://www.food4rhino.com/project/tttoolbox?ufh).
 
-# Preparing Data in ArcGIS
+## Preparing Data in ArcGIS
 
 This exercise uses a building footprint shapefile and visualizes the height of the buildings by extruding with height data in the shape file’s attributes.
 
@@ -28,7 +28,7 @@ Export the selected data as a new shapefile. Right click on the data layer and `
 
 Make sure that the pull-down menu at the top of the export dialog box is set to Selected records, pick a location to save the file, and set the file type to Shapefile.
 
-# Preparing Attribute Data in Excel
+## Preparing Attribute Data in Excel
 
 Open Microsoft Excel.
 
@@ -36,7 +36,7 @@ Open the exported shapefile database (DBF file extension). Navigate to the folde
 
 Save As this file as an Excel Workbook (`.xlsx` extension).
 
-# Importing Spatial Data into Grasshopper
+## Importing Spatial Data into Grasshopper
 
 ![t10-3.png](URL)
 
@@ -54,7 +54,7 @@ Note: SHP component may only open shapefiles in Rhinoceros 5 (not the 64-Bit ver
 
 Convert `Curves` to `Boundary Surfaces`. Connect the `Curve` component to a `Boundary Surface` component. This ensures that footprints with nested curves (courtyards) are only counted as a single item.
 
-# Import Attribute Data into Grasshopper
+## Import Attribute Data into Grasshopper
 
 ![t10-6.png](URL)
 
@@ -72,7 +72,7 @@ Now it is time to extract height data. Create a `Tree Branch Index` component an
 
 You should now see the field name in the panel connected to (A) and the values in the panel connected to (B). Changing the slider connected to the `Branch Index` will change between all of the fields (the columns from the Excel file), and `45` should be the field NumFloors" in this example.
 
-# Extruding Building Footprints
+## Extruding Building Footprints
 
 ![t10-9.png](URL)
 

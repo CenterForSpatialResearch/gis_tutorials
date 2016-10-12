@@ -1,7 +1,7 @@
 
-## Downloading and Displaying Data from American FactFinder
+# Downloading and Displaying Data from American FactFinder
 
-# Using FactFinder to Find Census Data
+## Using FactFinder to Find Census Data
 
 Census data can be downloaded from the [American FactFinder](http://factfinder.census.gov/).
 
@@ -82,7 +82,7 @@ Once the file is open, ensure the following:
 
 Once the modifications to the table are made, save the file in an Excel Workbook `.xlsx` format (Do not use Excel 97-2003). Close the Excel file after saving.
 
-# Joining Excel Table to TIGER Shapefile in ArcMap
+## Joining Excel Table to TIGER Shapefile in ArcMap
 
 Open ArcMap and new blank map. Add the TIGER shapefile you unzipped to the map. You may have to `connect to folder` to locate the file. The shapefile will now be displayed on the map. Next add the Excel table to the map using the same technique. Please be aware that it will not correctly load unless you have closed the file in Excel first.
 
@@ -102,7 +102,7 @@ The join is only temporary unless you export the data as a new shapefile. Right 
 
 ![t11-16.png](URL)
 
-# Displaying and Visualizing Census Data
+## Displaying and Visualizing Census Data
 
 To graphically analyze the dataset you created and joined we can symbolize the data using the `Symbology` under the `Layer Properties`.
 

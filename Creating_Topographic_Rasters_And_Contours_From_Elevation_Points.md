@@ -1,4 +1,4 @@
-## Creating Topographic Contours from Elevation Points and Rasters
+# Creating Topographic Contours from Elevation Points and Rasters
 
 Below are intructions on how to create topographic rasters and contours from spot elevation points in ArcGIS.
 
@@ -10,7 +10,7 @@ In this tutorial, we will be taking surveyed spot elevation data provided by New
 
 Up to date elevation data is directly available through New York City’s OpenData portal here: [Elevation Points](https://data.cityofnewyork.us/Transportation/Elevation-points/szwg-xci6)
 
-# Creating a Topographic Raster
+## Creating a Topographic Raster
 
 Unzip the file you downloaded from the NYC OpenData portal. Create a new map in ArcMap and add the new data layer.
 
@@ -18,7 +18,7 @@ Unzip the file you downloaded from the NYC OpenData portal. Create a new map in 
 
 This dataset contains over a million points and includes multiple types of elevation measurement. Before we can generate our elevation raster, we first need to reduce the  data to a workable size and limit our selection to only spot elevations.
 
-# Sorting the Data
+## Sorting the Data
 
 ![t8-2.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_08/t8-2.png)
 
@@ -58,7 +58,7 @@ Now our selection of only Spot Elevation Points has been made.
 
 Export the selected points as a new dataset by right-clicking on the layer and going to `Data` > `Export Data`.
 
-# Interpolating Point Data
+## Interpolating Point Data
 
 ![t8-9.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_08/t8-9.png)
 
@@ -82,7 +82,7 @@ The output raster file should be added automatically to the layers of the curren
 
 To change how the raster layer is displayed, right-click the layer, open the Properties menu, and go to the `Symbology` tab. Change the symbology from a `Classified` display to a `Stretched` display and it will display as a grayscale raster image.
 
-# Generating Topographic Contours
+## Generating Topographic Contours
 
 This section will show you how to create contours from a raster file. Typically, we use this method to generate topography lines, but you can also use this process for non-elevation raster data.
 

@@ -1,10 +1,10 @@
-## Visualizing Data in 3D Using ArcScene
+# Visualizing Data in 3D Using ArcScene
 
 *Below are intructions on how to import and visualize data in 3D using ArcScene*
 
 ArcScene is the 3D equivalent to ArcMap. You can use ArcScene to visualize vector and raster data in three dimensions, including changing base heights and extruding volumes.
 
-# Visualizing Vector Data
+## Visualizing Vector Data
 
 This exercise uses a building footprint shapefile and visualizes the height of the building by extruding based on height data in the shapefile. This extrusion process can be used with any shapefile and based on any quantitative field in the shapefile's attribute table. For a building height extrusion in New York City, use the latest building footprint data from the NYC Planning website under the MapPLUTO files. The field representing height is called 'HEIGHT_ROO'. This will be used to extrude the building footprints to their appropriate heights. Similarly, the building heights can be extruded using the number of floors as an approximation for height by multiplying the number of floors by an average height of 12-14 feet per floor.
 
@@ -42,7 +42,7 @@ Your layer should now look something like the image below. Each of your layer's 
 
 Other files called Multipatch files can be imported that already contain detailed 3D information. This data includes details such as roof setbacks and roof slopes. For New York City, a multipatch database can be found under the Department of City Planning website here.
 
-#Visualizing Raster Data
+## Visualizing Raster Data
 
 ![t5-8.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_05/t5-8.png)
 

@@ -1,10 +1,10 @@
-## Downloading Vector Data in Grasshopper using Mosquito
+# Downloading Vector Data in Grasshopper using Mosquito
 
 This tutorial uses Mosquito version 0.4c available via [Studio Smuts](http://www.studiosmuts.com/ceed3/mosquito/
 
 Several plug-ins available for Grasshopper enable the use of spatial data in Grasshopper via online sources.
 
-# Downloading Vector Maps
+## Downloading Vector Maps
 
 *IMPORTANT: This tutorial requires an internet connection.*
 
@@ -38,7 +38,7 @@ Click the `Reload` button on the component. The component will display a loading
 
 Basic roads will now be visible in the Rhino viewport.
 
-# Downloading Additional Information
+## Downloading Additional Information
 
 ![t12-7.png](URL)
 

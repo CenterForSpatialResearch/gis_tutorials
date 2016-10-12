@@ -1,8 +1,8 @@
-## Taking Sections through 2D Raster Maps
+# Taking Sections through 2D Raster Maps
 
 Below are intructions on how to use extract sectional profiles from 2D Raster Maps in ArcGIS.
 
-# Taking Sections Through 2D Raster Maps
+## Taking Sections Through 2D Raster Maps
 
 Many 2D Raster mappings (such as elevation models) contain information you may want to communicate with a section cut. The Profile Tool in ArcGIS's 3D Analyst allows you to do this.
 
@@ -22,7 +22,7 @@ In the dialog box, make sure that `3D Analyst` is checked, and click `Close`.
 
 Next, add the `3D Analyst` toolbar to your interface if it is not already present. To do this Right-Click on any toolbar or go to the Customize > Toolbars from the main pull-down menus. A list of toolbars will appear. Click "3D Analyst," and the 3D Analyst toolbar will appear.
 
-# Using the `Profile` Tool:
+## Using the `Profile` Tool:
 
 Using the `Interpolate Line Tool`, draw the line of your section on the raster map.
 

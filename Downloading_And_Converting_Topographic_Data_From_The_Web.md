@@ -1,8 +1,8 @@
-## Downloading and Converting Raster Data from the Web
+# Downloading and Converting Raster Data from the Web
 
 Below are intructions on how to download topographic data for International data from the Earth Explorer, for the USA from USGS, and for New York State using the Cornell University Geospatial Information Repository (CUGIR).
 
-# Downloading International Data using the USGS Earth Explorer
+## Downloading International Data using the USGS Earth Explorer
 
 The United States Geological Survey (USGS) makes a wide array of data available to the public through their EarthExplorer server.Among this data is topographic information. The following tutorial will walk you through downloading this topographic data from the website.
 
@@ -34,7 +34,7 @@ You will be redirected to the `Results` tab showing relevant datasets from your 
 
 You can now add your downloaded file to your map.
 
-# Downloading data for the USA using the USGS National Map Viewer
+## Downloading data for the USA using the USGS National Map Viewer
 
 The United States Geological Survey (USGS) makes a wide array of data available to the public through their NationalMap server. Among this data is topographic information. The following tutorial will walk you through downloading this topographic data from the website.
 
@@ -62,7 +62,7 @@ Clicking on `Footprint` or `Thumbnail` will preview your raster image on the map
 
 You can now add your downloaded file to your map.
 
-# Downloading data for New York State using the CUGIR
+## Downloading data for New York State using the CUGIR
 
 The Cornell University Geospatial Information Repository (CUGIR) has a wealth of information on New York State including topographic information. This tutorial will walk you through finding and downloading this information.
 
@@ -92,7 +92,7 @@ On the next page, download the files you need.
 
 The next section of this tutorial will walk you through using the DEMs you downloaded in ArcMap.
 
-# Using DEM Imagery in ArcMap
+## Using DEM Imagery in ArcMap
 
 Download the DEM information from the previous example. This file will be saved as a `.zip` file. Unzip the whole `.zip` file, then unpackage the `.gz` file within the file. You should now have a `.dem` file ready to use.
 

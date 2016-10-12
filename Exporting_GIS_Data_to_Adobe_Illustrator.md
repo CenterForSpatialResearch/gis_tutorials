@@ -1,4 +1,4 @@
-## Exporting GIS Data to Adobe Illustrator
+# Exporting GIS Data to Adobe Illustrator
 
 *This tutorial will guide you through the process of exporting GIS shapefiles for use as vector files in Adobe Illustrator.*
 

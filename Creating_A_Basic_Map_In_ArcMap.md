@@ -1,4 +1,4 @@
-## Creating a Basic Map in ArcMap
+# Creating a Basic Map in ArcMap
 
 *This tutorial will cover some basics of the ArcMap user interface, using map symbology, and creating a map layout.*
 
@@ -48,7 +48,7 @@ Again, you can change the number of classes by using the `Classes` drop-down men
 
 In all cases, clicking `OK` will save and display your new symbology.
 
-# Laying Out and Exporting Your Map:
+## Laying Out and Exporting Your Map:
 
 ![t1-10.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_01/t1_10.PNG)
 

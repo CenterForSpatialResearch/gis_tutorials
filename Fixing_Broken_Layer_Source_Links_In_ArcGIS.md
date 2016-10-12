@@ -1,16 +1,16 @@
-## Fixing Broken Layer Source Links in ArcGIS
+# Fixing Broken Layer Source Links in ArcGIS
 
 *This tutorial will guide you through the process of fixing broken layer source links in ArcGIS.*
 
 ArcGIS does not embed or import data layers into each individual project file. Instead, it creates links from the project to the data layers. As a result, as files are moved or renamed, these links occasionally need to be repaired.
 
-#Identifying a Broken Link
+## Identifying a Broken Link
 
 ![t4-1.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_04/t4_1.PNG)
 
 If a data layer does not appear in the map viewport, you probably have a broken link. This is noted in the `Table on Contents` by a RED EXCLAMATION POINT beside the layer name. Note that the check-box that normally shows whether a layer is visible is greyed out, because ArcMap cannot find or access the file to turn it on.
 
-#Identifying and Fixing Link Paths
+## Identifying and Fixing Link Paths
 
 ![t4-2.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_04/t4_2.PNG)
 
