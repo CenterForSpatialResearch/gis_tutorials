@@ -73,10 +73,10 @@ Unzip the .zip file of the dataset you downloaded for Gross Rent and open the `.
 
 Once the file is open, ensure the following:
 
-* Use only one header row. Rename these headers as meaningful to their associated data.
-* Start data values in row 2.
-* Ensure there are no special characters (periods, commas, ampersands, hyphens, etc.) in the headings.
-* Delete any extra columns of data that you do not need in your dataset.
+  * Use only one header row. Rename these headers as meaningful to their associated data.
+  * Start data values in row 2.
+  * Ensure there are no special characters (periods, commas, ampersands, hyphens, etc.) in the headings.
+  * Delete any extra columns of data that you do not need in your dataset.
 
 ![t11-12.png](URL)
 

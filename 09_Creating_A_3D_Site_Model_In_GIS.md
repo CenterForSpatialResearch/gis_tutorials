@@ -42,9 +42,9 @@ Click `OK`, and you'll see the contours are now displayed in 3D.
 TINs (or Triangulated Irregular Networks) are representations of 3D surfaces that use a set of contiguous, non-overlapping triangles to describe a geographic surface.
 
 TINs can be created from a number of data sources, including points, lines, and polygons. For example:
-	*Digitized contour lines (hypsography)
-	*Spot elevations from GPS or survey data
-	*Satellite LiDAR data or NED data
+  *Digitized contour lines (hypsography)
+  *Spot elevations from GPS or survey data
+  *Satellite LiDAR data or NED data
 
 We can Build a TIN in either ArcMap or ArcScene. We will use ArcScene in this example. Open `ArcToolbox` > `3D Analyst Tools` > `Data Management` > `TIN` > `Create Tin`
 
