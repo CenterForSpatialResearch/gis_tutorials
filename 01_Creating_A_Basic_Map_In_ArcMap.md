@@ -18,7 +18,7 @@ Once you have added data, you can zoom and pan using the buttons on the toolbar.
 
 You can arrange the ordering of the layers by stacking the data layer names in the `Display` tab of the `Table of Contents` on the left of the screen. The ordering of the layers in the `Table of Contents` will correspond to their ordering in the map. Below is an example. The open space layer is displayed above the building layer, which is in turn displayed above the water layer.
 
-![t1-5.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_01/t1_5.PNG)
+![t1-5.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_01/t1_5.png)
 
 To change the symbology of your layers, right-click on the layer name and choose `Properties`.
 
@@ -60,7 +60,7 @@ The map window should now show you your map's data frame on a sheet of paper. Yo
 
 A new set of tools to zoom and pan appears when you are in the `Layout View`. The `Data View` zoom and pan tools are still active and will affect the map within the data frame. To zoom and pan on the page without affecting the map, use the (page) `Zoom` and `Pan` toolbar shown above.
 
-![t1-12.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_01/t1_12.PNG)
+![t1-12.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_01/t1_12.png)
 
 You can add standard elements to your map through the `Insert` menu shown below. The `Legend`, `North Arrow`, `Scale Bar`, and `Scale Text` options each lead to dialogues that allow you to customize those map elements.
 

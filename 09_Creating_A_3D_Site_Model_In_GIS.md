@@ -5,9 +5,9 @@ The purpose of this tutorial is to introduce and explore surface data analysis u
 ArcGIS uses an extension called 3D Analyst to visualize and analyze 3D surface data.
 
 This extension allows you to:
-	* create digital models of geographic surfaces
-	* display the models in three-dimensions using the application ArcScene
-	* analyze various properties of these models
+  * create digital models of geographic surfaces
+  * display the models in three-dimensions using the application ArcScene
+  * analyze various properties of these models
 
 ![t9-0.png](URL)
 
