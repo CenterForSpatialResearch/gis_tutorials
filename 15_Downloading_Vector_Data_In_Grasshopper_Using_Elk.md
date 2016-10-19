@@ -30,8 +30,6 @@ Zoom to your area of interest and select `Export` at the top left. In the left m
 
 Set the `File Path` component to the source of your downloaded OSM data. Load a `OSM Data` component. Attach the `OSM` output from the `Location` component to the `O` input and attach the `File Path` to the `F` input. 
 
-![t15-5.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_15/t15-5.png)
-
 You will now see your data as points in the Rhino viewport. You can use a `Polyline` component to draw the lines between the points.
 
 ![t15-6.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_15/t15-6.png)
