@@ -1,6 +1,6 @@
 # Downloading Vector Data in Grasshopper using Mosquito
 
-This tutorial uses Mosquito version 0.4c available via [Studio Smuts](http://www.studiosmuts.com/ceed3/mosquito/
+This tutorial uses Mosquito version 0.4c available via [Studio Smuts](http://www.studiosmuts.com/ceed3/mosquito/)
 
 Several plug-ins available for Grasshopper enable the use of spatial data in Grasshopper via online sources.
 
@@ -8,46 +8,60 @@ Several plug-ins available for Grasshopper enable the use of spatial data in Gra
 
 *IMPORTANT: This tutorial requires an internet connection.*
 
-![t12-0.png](URL)
+![t13-0.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_13/t13-0.png)
 
-Load the `Location` component. Add a panel where you can add the input location. You can simply search for a place, such as `New York City` or an address, such as `116 St. & Broadway, New York, NY 10027`. We will type in `Columbia University` into our panel.
+Install the Mosquito plug in by copying all appropriate files into the Grasshopper Components folder, accessed in Grasshopper under `File` > `Special Folders` > `Component Folder`. You may need to unblock the `Newtosoft.Json.dll` file and the `.DS_Store` file by right clicking on the file > `Properties` > `Unblock` at the bottom of the `General` tab. Now restart Grasshopper and a new tab for Mosquito components should be displayed.
 
-![t12-1.png](URL)
+![t13-1.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_13/t13-1.png)
 
-Plug in the panel into the `Location` input of the `Location` component. Using a `List Index` component to extract only one point and add the output `Points` to the `List` input. Add a `Circle` component with center around the `List Index` output `index`. These circles define the scope of our search in the `Vector Maps` component.
+Load the `Location` component. Add a panel where you can add the input location. You can simply search for a place, such as `New York City` or an address, such as `116 St. & Broadway, New York, NY 10027`. We will type in `Columbia University New York City` into our panel.
 
-![t12-2.png](URL)
+![t13-2.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_13/t13-2.png)
+
+Plug in the panel into the `Location` input of the `Location` component. Using a `List Item` component to extract only one point and add the output `Points` to the `List` input. Add a `Circle` component with center around the `List Item` output `index`. These circles define the scope of our search in the `Vector Maps` component.
 
 Add a `Number Slider` component with a value of 0.01 for the radius of the circle. Connect the slider to the `radius` input of the `Circle` component.
 
 *IMPORTANT: The radius of this circle must not be too large or the download request may be rejected. We will use a radius of 0.01*
 
-![t12-3.png](URL)
+![t13-3.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_13/t13-3.png)
 
-You may need to zoon in to see your circle and point.
+You may need to zoom in to see your circle and point.
 
-![t12-4.png](URL)
+![t13-4.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_13/t13-4.png)
 
 Create a `Vector Maps` component. Connect the `Circle` component output to the `Area` input of the `Vector Maps` component.
 
-![t12-5.png](URL)
+Click the `Reload` button on the component. The component will display a loading and downloading preview until completed. Basic roads will now be visible in the Rhino viewport.
 
-Click the `Reload` button on the component. The component will display a loading and downloading preview until completed.
+## Downloading Additional Road and Building Information
 
-![t12-6.png](URL)
-
-Basic roads will now be visible in the Rhino viewport.
-
-## Downloading Additional Information
-
-![t12-7.png](URL)
+![t13-5.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_13/t13-5.png)
 
 Create a `Boolean Toggle` component and connect to `AllRoads` and `Buildings` in the `Vector Maps` component. Click `Reload`. The process may take few minutes.
+
+## Projecting to Meters
+
+![t13-6.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_13/t13-6.png)
+
+Create a `Boolean Toggle` component and attach it to the inputs `Reproject` and `CenterToWorld`. Set the boolean to true and `Reload` the `Vector Maps` component.
+
+The map will now appear less distorted in the Rhino viewport.
+
+## Extruding 3D Buildings
+
+Depending on the location of your map, you may be able to extract height information for some cities such as New York City.
+
+![t13-7.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_13/t13-7.png)
 
 To download height information for creating 3D buildings add an `Extrude` component and connect the `BuildingLines` to the `B` input.
 
 Connect the `BuildingHeights` output to a `Unit Z` component and connect the `vector` output to the `direction` input of the Extrude component. Finally, cap the breps using the `Cap` component to close all extruded surfaces.
 
-![t12-8.png](URL)
+![t13-8.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_13/t13-8.png)
 
-You will now have buildings extruded to appropriate heights and roads displayed once baked into Rhino.
+You will now have buildings extruded to appropriate heights and roads displayed.
+
+![t13-9.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_13/t13-9.png)
+
+Finally, bake your geometry into Rhino.
