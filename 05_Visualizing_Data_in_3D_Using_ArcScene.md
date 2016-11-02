@@ -40,7 +40,7 @@ Your layer should now look something like the image below. Each of your layer's 
 
 ![t5-7.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_05/t5-7.png)
 
-Other files called Multipatch files can be imported that already contain detailed 3D information. This data includes details such as roof setbacks and roof slopes. For New York City, a multipatch database can be found under the Department of City Planning website here.
+Other files called Multipatch files can be imported that already contain detailed 3D information. This data includes details such as roof setbacks and roof slopes. For New York City, a multipatch database can be found under the Department of City Planning website.
 
 ## Visualizing Raster Data
 

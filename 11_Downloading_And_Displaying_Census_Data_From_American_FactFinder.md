@@ -70,6 +70,8 @@ On the next page, choose the year of interest and the layer type. From the `Sele
 
 On the next page choose the geography of your interest. From the `Select a State` dropdown menu we will choose `New York` and click `Download`. Your download will now begin. You may need to disable pop-up blockers for the download to start.
 
+*Note: If you download these files in Google Chrome or some web browsers, you may need to disable security preferences indicated by a security shield to the right of the address bar.*
+
 TIGER shapefiles can also be downloaded directly from the American Factfinder without having to navigate to a new webpage. In the preview page of your selected data, choose `Create Map`.
 
 ![t11-9.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_11/t11-9.png)
@@ -78,7 +80,9 @@ Click `Create Map`. Click on any piece of hyperlinked data in the table to creat
 
 ![t11-10.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_11/t11-10.png)
 
-In the `Download` dialog box, select the option for “Shapefiles (.zip)” at the bottom of the window under `Spatial Data formats.` Click `OK` and `Download` in the next window. You may have to turn off pop-up blockers to download the data.
+In the `Download` dialog box, select the option for “Shapefiles (.zip)” at the bottom of the window under `Spatial Data formats.` Click `OK` and `Download` in the next window. You may have to turn off pop-up blockers to download the data. If the file does not contain projection data, it is recommended to download the TIGER shapefiles directly from the TIGER website.
+
+*Note: If you download these files in Google Chrome or some web browsers, you may need to disable security preferences indicated by a security shield to the right of the address bar.*
 
 ## Preparing FactFinder Data for Importing and Joining into ArcMap
 
@@ -99,7 +103,7 @@ Once the file is open, ensure the following:
   * Ensure there are no special characters (periods, commas, ampersands, hyphens, etc.) in the headings.
   * Delete any extra columns of data that you do not need in your dataset.
 
-Note: If you downloaded your TIGER data from the TIGER website, you will have to change the column including your `GEO_ID` field to a `Text` type. This will make it possible to join in ArcMap. If you downloaded the TIGER data from the `Create Map` feature on the FactFinder website, you can leave this column as a `General` or `Number` type.
+*Note: If you downloaded your TIGER data from the TIGER website, you will have to change the column including your `GEO_ID` field to a `Text` type. This will make it possible to join in ArcMap. If you downloaded the TIGER data from the `Create Map` feature on the FactFinder website, you can leave this column as a `General` or `Number` type.*
 
 ![t11-16.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_11/t11-16.png)
 

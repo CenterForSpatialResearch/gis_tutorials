@@ -2,11 +2,47 @@
 
 Below are intructions on how to import 3D data from ArcScene into Rhino and 3DS Max
 
-Note: It is recommended that you only export one layer at a time, particularly when exporting topography or buildings.
+![t5-0.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_05/t5-0.png)
+
+Open `ArcScene`. (You will find it at `Programs` > `ArcGIS` > `ArcScene`.) Notice that the interface is very similar to that of `ArcMap`.
+
+![t5-1.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_05/t5-1.png)
+
+Add Data. You do this exactly the same way as you would in ArcMap, using the `Add Data` button in the main toolbar.
+
+![t5-2.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_05/t5-2.png)
+
+Once you've added your data, it will appear in the window. It will probably appear floating askew, without any volumes. This is because you have not yet assigned an attribute with which `ArcScene` will create volumes.
+
+![t5-3.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_05/t5-3.png)
+
+Adding 3D attributes to your map works much like changing or adding symbology to a 2D project in `ArcMap`. Right click on your data layer name in the table of contents and select `Properties`. (Note that one of the tabs in the resulting dialogue box is named `Symbology`. The functions in this tab operate the same as those in `ArcMap`.)
+
+Go to the `Extrusions` tab, and check that you would like to `Extrude features in layer`. Then click the calculator button (on the right) to select or calculate your extrusion heights.
+
+![t5-4.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_05/t5-4.png)
+ 
+The `Expression Builder` dialogue box will appear. Note that the `Fields` box on the left contains the data fields associated with this layer. You can extrude your layer based on any of these fields by double-clicking its name in the `Fields` box. You can also manipulate its extrusion through any of the mathematic functions in the `Functions` box or using the calculator buttons on the right. (In the example below, the data layer will be extruded by values in the `HEIGHT_ROO` field.) When you are finished building your expression, click `OK`.
+
+![t5-5.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_05/t5-5.png)
+
+We will apply the extrusion by adding it to the feature's minumum height. In the drop down menu `Apply Extrusion by:` choose the option `adding it to each feature's minimum height`.
+
+![t5-6.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_05/t5-6.png)
+
+Your layer should now look something like the image below. Each of your layer's polygons will be extruded to volumes. (If you started with a line file, they will be extruded to planes. If you started with a point file, they will be extruded to lines.)
+
+![t5-7.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_05/t5-7.png)
+
+Other files called Multipatch files can be imported that already contain detailed 3D information. This data includes details such as roof setbacks and roof slopes. For New York City, a multipatch database can be found under the Department of City Planning website.
+
+It is recommended that you make a selection of the area you wish to model before exporting, so you will not export large amounts of unnecessary data.
 
 ![t10-0.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_10/t10-0.png)
 
 Once you have your 3D data imported in ArcScene, go to `File` > `Export Scene` > `3D`. Save your file (the only option is `VRML` format). Depending on how big your file is, this might take some time.
+
+Note: It is recommended that you only export one layer at a time, particularly when exporting topography or buildings.
 
 ![t10-1.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_10/t10-1.png)
 

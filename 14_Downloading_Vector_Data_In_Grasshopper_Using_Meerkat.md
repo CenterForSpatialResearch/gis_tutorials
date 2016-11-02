@@ -1,8 +1,9 @@
 # Downloading Vector Data in Grasshopper using Meerkat
 
 This tutorial uses Meerkat Beta version 1.6c available via [Food4Rhino](http://www.food4rhino.com/project/meerkatgis?ufh)
+You will also need [Grasshopper](http://www.grasshopper3d.com/) for Rhino 5.0
 
-Several plug-ins available for Grasshopper enable the use of spatial data in Grasshopper via online sources. This tutorial will cover how to download vector data in Grasshopper using the Meerkat plug-in.
+The advantage of using the Meerkat to visualize 3D data is the ability to quickly select areas around your shapefiles without selecting or clipping data beforehand in ArcGIS. Additionally, attributes are preserved in the datasets that you can see and use in Grasshopper. You will have to convert your shapefiles to `.mkgis` files in the plug-in during this process.
 
 ## Loading GIS Data using Meerkat
 
@@ -64,6 +65,4 @@ Add a `Polyline` component and attach the `G` geometry output of the `Move` comp
 
 ![t14-11.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_14/t14-11.png)
 
-We can continue to add data to our file. We will load the roads using the same process.
-
-The advantage to using Meerkat to load shapefiles is the ability to quickly crop shapefiles to a selected region and the ability to read the attributes of the shapefiles.
+We can continue to add data to our file. We will load the roads using the same process to our map.

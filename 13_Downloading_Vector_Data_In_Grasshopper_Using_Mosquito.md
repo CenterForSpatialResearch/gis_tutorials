@@ -1,8 +1,9 @@
 # Downloading Vector Data in Grasshopper using Mosquito
 
 This tutorial uses Mosquito version 0.4c available via [Studio Smuts](http://www.studiosmuts.com/ceed3/mosquito/)
+You will also need [Grasshopper](http://www.grasshopper3d.com/) for Rhino 5.0
 
-Several plug-ins available for Grasshopper enable the use of spatial data in Grasshopper via online sources.
+The advantage of using Mosquito is the ability to download OpenStreetMap building footprints and roads directly through Grasshopper and easily extrude 3D buildings. Since OpenStreetMap data is open source data, the maps may have incompleteness in parts, but will suffice for most areas of interest. The plug-in has limited 3D capabilities beyond building extrusions but includes attributes for selected data.
 
 ## Downloading Vector Maps
 
