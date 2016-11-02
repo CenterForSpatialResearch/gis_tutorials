@@ -36,11 +36,13 @@ Create a `Value List` parameter for the `resolution` input of the `RESTraster` c
 
 Enter the following into the list:
 
-`None = 
+```
+None = 
 Low  = 256
 Med  = 512
 High = 1024
-Max  = 2048`
+Max  = 2048
+```
 
 Now create a panel for the `fileLocation` input of the `RESTraster` component. Write `C:\temp\` to store the file in the temporary location on your C Drive.
 
@@ -50,16 +52,18 @@ Create a `Value List` parameter for the `URL` input of the `RESTraster` componen
 
 To query the Catalog of ESRI ArcGIS REST Basemaps, enter the following into the list:
 
-`World Imagery                   = "http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?"
+```
+World Imagery                   = "http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?"
 World Topographic               = "http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/export?"
 World Physical Map              = "http://server.arcgisonline.com/ArcGIS/rest/services/World_Physical_Map/MapServer/export?"
 World Street Map                = "http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/export?"
-World DeLorme Street Map        = "http://server.arcgisonline.com/ArcGIS/rest/services/Specialty/DeLorme_World_Base_Map/MapServer/export?"`
+World DeLorme Street Map        = "http://server.arcgisonline.com/ArcGIS/rest/services/Specialty/DeLorme_World_Base_Map/MapServer/export?"
+```
 
 To query the Catalog of ESRI ArcGIS REST Basemaps, enter the following into the list:
 
-
-`Ortho 1 Foot Imagery     = "http://raster.nationalmap.gov/arcgis/rest/services/Orthoimagery/USGS_EROS_Ortho_1Foot/ImageServer/exportImage?"
+```
+Ortho 1 Foot Imagery     = "http://raster.nationalmap.gov/arcgis/rest/services/Orthoimagery/USGS_EROS_Ortho_1Foot/ImageServer/exportImage?"
 Ortho Imagery            = "http://raster.nationalmap.gov/arcgis/rest/services/Orthoimagery/USGS_EROS_Ortho/ImageServer/exportImage?"
 NAIP Imagery             = "http://raster.nationalmap.gov/arcgis/rest/services/Orthoimagery/USGS_EROS_Ortho_NAIP/ImageServer/exportImage?"
 Land Cover               = "http://raster.nationalmap.gov/arcgis/rest/services/LandCover/USGS_EROS_LandCover_NLCD/MapServer/export?"
@@ -67,7 +71,8 @@ Land Cover - Conus 01    = "http://raster.nationalmap.gov/arcgis/rest/services/L
 Land Cover - Conus 06    = "http://raster.nationalmap.gov/arcgis/rest/services/LandCover/conus_06/MapServer/export?"
 Land Cover - Development = "http://raster.nationalmap.gov/arcgis/rest/services/LandCover/Development_0106/MapServer/export?"
 Land Cover - Wetland     = "http://raster.nationalmap.gov/arcgis/rest/services/LandCover/Wetland_0106/MapServer/export?"
-Topo - Scanned Maps      = "http://raster.nationalmap.gov/arcgis/rest/services/Scanned_Maps/USGS_EROS_DRG_SCALE/ImageServer/exportImage?"`
+Topo - Scanned Maps      = "http://raster.nationalmap.gov/arcgis/rest/services/Scanned_Maps/USGS_EROS_DRG_SCALE/ImageServer/exportImage?"
+```
 
 Create a `Boolean Toggle` and set to true for the `get` input of the `RESTraster` component.
 
