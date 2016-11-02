@@ -1,8 +1,9 @@
 # Downloading Vector Data in Grasshopper using Elk
 
 This tutorial uses Elk version 2.2.2 available via [Food4Rhino](http://www.food4rhino.com/project/elk?ufh)
+You will also need [Grasshopper](http://www.grasshopper3d.com/) for Rhino 5.0
 
-Several plug-ins available for Grasshopper enable the use of spatial data in Grasshopper via online sources. This tutorial will cover how to download vector data in Grasshopper using the Elk plug-in.
+The advantage of using the Elk plug-in is the ability to convert OSM data in Grasshopper for display in Rhino, quickly selecting the feature types that are available including layers beyond roads and buildings. Since OSM data is open source data, the maps may have incompleteness in parts, but will suffice for most areas of interest.
 
 ## Loading OSM Data using Elk
 
@@ -24,8 +25,6 @@ Navigate to [OpenStreetMaps](https://www.openstreetmap.org/) to download the OSM
 
 Zoom to your area of interest and select `Export` at the top left. In the left menu you can select `Manually select a different area` to draw a bounding rectangle on your map. Click `Export`. If the export fails, you can try one of the options in the left menu bar such as the Overpass API to download the data.
 
-*NOTE: Since OSM data is open source data, the maps may have incompleteness in parts, but will suffice for most areas of interest.*
-
 ![t15-4.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_15/t15-4.png)
 
 Set the `File Path` component to the source of your downloaded OSM data. Load a `OSM Data` component. Attach the `OSM` output from the `Location` component to the `O` input and attach the `File Path` to the `F` input. 
@@ -43,5 +42,3 @@ You can continue to add data by copying creating different streams of OSM inputs
 ![t15-8.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_15/t15-8.png)
 
 For some geographies, you can extrude buildings to their heights by right clicking on the `OSM Data` component and clicking on `Create 3D Buildings`. A `Bldg` output will be added and you can attach this output to a `Geometry` parameter. Your buildings will now be displayed in 3D.
-
-The advantage to using Elk is the ability to convert OSM data in Grasshopper for display in Rhino, quickly selecting the feature types of your interest.
