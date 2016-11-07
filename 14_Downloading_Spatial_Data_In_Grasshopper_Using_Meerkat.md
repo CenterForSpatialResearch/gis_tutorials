@@ -1,4 +1,4 @@
-# Downloading Vector Data in Grasshopper using Meerkat
+# Downloading Spatial Data in Grasshopper using Meerkat
 
 This tutorial uses Meerkat Beta version 1.6c available via [Food4Rhino](http://www.food4rhino.com/project/meerkatgis?ufh)
 You will also need [Grasshopper](http://www.grasshopper3d.com/) for Rhino 5.0

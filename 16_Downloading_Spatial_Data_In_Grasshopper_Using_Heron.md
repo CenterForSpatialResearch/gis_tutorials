@@ -143,7 +143,7 @@ We will now define the domain of the attributes and convert them into a color ra
 
 We must now convert our polylines to meshes to use visualize our `Gradient`. Convert the `Polylines` to `Boundary Surfaces`. Then use a `Mesh Brep` component to convert the `Boundary Surfaces` to Meshes.
 
-Create a `Custom Preview Materials` component. Attach the `M` Mesh output to the `G` Geometry input of the `Custom Preview Materials`. Attach the `Gradient` output to the `DC` Diffuse Color input of the `Custom Preview Materials`.
+Create a `Custom Preview Materials` component. Attach the `M` Mesh output to the `G` Geometry input of the `Custom Preview Materials`. Attach the `Gradient` output to the 
 
 ![t16-6.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_16/t16-6.png)
 
