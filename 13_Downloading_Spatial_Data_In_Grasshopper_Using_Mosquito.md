@@ -1,4 +1,4 @@
-# Downloading Vector Data in Grasshopper using Mosquito
+# Downloading Spatial Data in Grasshopper using Mosquito
 
 This tutorial uses Mosquito version 0.4c available via [Studio Smuts](http://www.studiosmuts.com/ceed3/mosquito/)
 You will also need [Grasshopper](http://www.grasshopper3d.com/) for Rhino 5.0

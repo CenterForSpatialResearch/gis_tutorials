@@ -1,4 +1,4 @@
-# Downloading Vector Data in Grasshopper using Elk
+# Downloading Spatial Data in Grasshopper using Elk
 
 This tutorial uses Elk version 2.2.2 available via [Food4Rhino](http://www.food4rhino.com/project/elk?ufh)
 You will also need [Grasshopper](http://www.grasshopper3d.com/) for Rhino 5.0
