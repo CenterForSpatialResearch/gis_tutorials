@@ -8,7 +8,7 @@ The United States Geological Survey (USGS) makes a wide array of data available 
 
 ![t6-0.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_06/t6-0.png)
 
-In your web browser, navigate to [earthexplorer.usgs.gov](earthexplorer.usgs.gov).
+In your web browser, navigate to [earthexplorer.usgs.gov](https://earthexplorer.usgs.gov/).
 
 You will have to resister and make an account to download files on this website.
 
@@ -28,7 +28,7 @@ Expand the `Digital Elevation` option and select `ASTER GLOBAL DEM`. A dialog bo
 
 ![t6-4.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_06/t6-4.png)
 
-You will be redirected to the `Results` tab showing relevant datasets from your search. You can click on the options in the search entry to expore the metadata or preview a footprint of the data before you download it. When you are satisfied with your selection click the `Download Options` button (the symbol of a green arrow pointing down to a server). 
+You will be redirected to the `Results` tab showing relevant datasets from your search. You can click on the options in the search entry to expore the metadata or preview a footprint of the data before you download it. When you are satisfied with your selection click the `Download Options` button (the symbol of a green arrow pointing down to a server).
 
 ![t6-5.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_06/t6-5.png)
 
@@ -40,7 +40,7 @@ The United States Geological Survey (USGS) makes a wide array of data available 
 
 ![t6-6.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_06/t6-6.png)
 
-In your web browser, navigate to [http://nationalmap.gov/viewer.html](http://nationalmap.gov/viewer.html).
+In your web browser, navigate to [the national map viewer](https://viewer.nationalmap.gov/basic/).
 
 ![t6-7.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_06/t6-7.png)
 
@@ -52,7 +52,7 @@ Once you have zoomed in to the area for which you are looking for information, m
 
 ![t6-9.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_06/t6-9.png)
 
-A list of available datasets will appear, including the resolution (smaller numbers are higher resolution and cover a smaller area and vice-versa - 1/9 arc second is the highest resolution and is good for zooming in on a specific site and 1 arc second is the lowest resolution and is good for a regional scale), `Data Extent`, and the format (the default choice is `ArcGrid`). 
+A list of available datasets will appear, including the resolution (smaller numbers are higher resolution and cover a smaller area and vice-versa - 1/9 arc second is the highest resolution and is good for zooming in on a specific site and 1 arc second is the lowest resolution and is good for a regional scale), `Data Extent`, and the format (the default choice is `ArcGrid`).
 
 ![t6-10.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_06/t6-10.png)
 
@@ -66,7 +66,7 @@ You can now add your downloaded file to your map.
 
 The Cornell University Geospatial Information Repository (CUGIR) has a wealth of information on New York State including topographic information. This tutorial will walk you through finding and downloading this information.
 
-In your web browser, navigate to the CUGIR website: [cugir.mannlib.cornel.edu](cugir.mannlib.cornel.edu)
+In your web browser, navigate to the [CUGIR website](http://cugir.mannlib.cornell.edu/index.jsp)
 
 ![t6-12.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_06/t6-12.png)
 
@@ -84,7 +84,7 @@ Select the `Elevation (10m raster)` from the `Data Theme Menu`. The provider for
 
 The next page offers a list of all the raster maps available for New York State organized by Mapsheet. You can navigate to your mapsheet of interest and click `download now` in the `Download` column. This will redirect you to a new page to download a zipped download package.
 
-If you do not know which map you need, you can select it by using a map rather than the list of names. To do this, click on the `Map Browse` option in the top menu bar. On the interactive map, click to zoom into your area of interest. Then, select the area for which you need to download information. For your future reference, the name of the map will appear when you hover your mouse cursor over the map. After you select your area, three files will be listed for you to download. The first is the `7.5 Minute Topographic Maps`. These files are georeferenced tiffs. The second is the elevation dataset in the form of a DEM (Digital Elevation Model). The last file is a polyline shapefile of water features for your area. 
+If you do not know which map you need, you can select it by using a map rather than the list of names. To do this, click on the `Map Browse` option in the top menu bar. On the interactive map, click to zoom into your area of interest. Then, select the area for which you need to download information. For your future reference, the name of the map will appear when you hover your mouse cursor over the map. After you select your area, three files will be listed for you to download. The first is the `7.5 Minute Topographic Maps`. These files are georeferenced tiffs. The second is the elevation dataset in the form of a DEM (Digital Elevation Model). The last file is a polyline shapefile of water features for your area.
 
 ![t6-16.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_06/t6-16.png)
 
