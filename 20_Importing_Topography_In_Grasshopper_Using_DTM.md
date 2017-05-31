@@ -12,7 +12,7 @@ DTM uses SRTM (Shuttle Radar Topography Mission) files in ASCII (Esri Grid) or X
 
 SRTM files can be downloaded viathe following links for locations worldwide:
 
-*[OpenTopography](http://opentopo.sdsc.edu/raster?opentopoID=OTSRTM.082015.4326.1) provided by the San Diego Supercomputer Center.
+### [OpenTopography](http://opentopo.sdsc.edu/raster?opentopoID=OTSRTM.082015.4326.1) provided by the San Diego Supercomputer Center.
 
 ![t20-0.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_20/t20-0.png)
 
@@ -24,7 +24,7 @@ In the dropdown menu for Data Output Formats, choose Arc ASCII Grid.
 
 You will have to fill out a Job Description to submit your request for downloading. Your results will be processed and listed as a compressed raster.
 
-*[CGIAR-CSI](http://srtm.csi.cgiar.org/selection/inputcoord.asp) provided by the Consortium for Spatial Information.
+### [CGIAR-CSI](http://srtm.csi.cgiar.org/selection/inputcoord.asp) provided by the Consortium for Spatial Information.
 
 ![t20-1.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_20/t20-1.png)
 
@@ -48,11 +48,10 @@ Open a new Rhino files and load Grasshopper.
 
 Create a `File Path` component. Right click and link to the ASCII file you downloaded online.
 
-Create a `DTM `component and load the `File Path` ouput into the `esri` input of the `DTM` component. 
+Create a `DTM `component and load the `File Path` ouput into the `esri` input of the `DTM` component.
 
 You can specify a boundary by drawing a rectangle in Rhino and referencing the rectangle using a `Curve` parameter and connecting it to the `rect` input of the `DTM` component. This reduces the area of the mesh so that your file will process faster.
 
 You can adjust the resolution using the `res` input of the `DTM` component. Create a `Slider` with a domain from 0 to 1 and attach it to the `DTM` component. A resolution of 1 will be the highest resolution and may take long amounts of time to process if your area of interest is large.
 
 You can now see your topography imported into Rhino as a mesh. You can create contours of this surface in Grasshopper to extract contour lines. These files are best used for topography at a resolution of 1/3 arcseconds or 10 meters.
-

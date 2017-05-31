@@ -11,7 +11,7 @@ This extension allows you to:
 
 ![t9-0.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_09/t9-0.png)
 
-The first thing you need to do is to create a specific GIS layers that you want to use for your site model. This is best completed using ArcMap. We will make a sub-selection of buildings footprints and roads from a layer downloaded from the [CUGIR](cugir.mannlib.cornel.edu) for Orange County New York. We will also use a DEM raster image for Orange County from the same source.
+The first thing you need to do is to create a specific GIS layers that you want to use for your site model. This is best completed using ArcMap. We will make a sub-selection of buildings footprints and roads from a layer downloaded from the [CUGIR](http://cugir.mannlib.cornell.edu/index.jsp) for Orange County New York. We will also use a DEM raster image for Orange County from the same source.
 
 Add all data layers into ArcMap. We will only select buildings and roads that fall on top of the raster image we downloaded.
 
@@ -124,10 +124,10 @@ Note: It is recommended that you only export one layer at a time, particularly w
 
 Go to `File` > `Export Scene` > `3D`. Save your file (the only option is `VRML` format). Depending on how big your file is, this might take some time.
 
-Import the `.vrml` file you just saved. You need to change the type of file to `all files` in order to see this file format. Once you import it you will notice that the file is all one mesh and that it has been rotated 90 degrees. 
+Import the `.vrml` file you just saved. You need to change the type of file to `all files` in order to see this file format. Once you import it you will notice that the file is all one mesh and that it has been rotated 90 degrees.
 
 You can rotate it back to its normal position and delete the camera that comes with it.
 
-![t9-18.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_09/t9-18.png) 
+![t9-18.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_09/t9-18.png)
 
 You have now imported your 3D data you created in ArcScene as a 3D site model in CAD format.
