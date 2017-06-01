@@ -1,6 +1,6 @@
 ## Data Types and 311 Data - ArcGIS
 
-This tutorial will show you how to download 311 data for New York City and how to create a categorical and a quantitative map of this data. There are three basic steps in this process: first, select, filter and download 311 data; second, add the 311 data to a map in qGIS; and third, classify the data so that it is correctly displayed on the map. In addition, this tutorial will also describe how to join the 311 data to another spatial dataset (census block groups) in order to aggregate it and display it based on its geographical location.
+This tutorial will show you how to download 311 data for New York City and how to create a categorical and a quantitative map of this data. There are three basic steps in this process: first, select, filter and download 311 data; second, add the 311 data to a map in ArcMap; and third, classify the data so that it is correctly displayed on the map. In addition, this tutorial will also describe how to join the 311 data to another spatial dataset (census block groups) in order to aggregate it and display it based on its geographical location.
 
 ### Datasets:
 The main dataset we will be using in this tutorial is based on 311 data. For those of you who don't know, 311 is a service provided by the city of New York where people can call in (dialing 311) and submit complaints or ask questions about living in the city (the service also accepts complaints online). Some of the most popular complaints filed through 311 are about parking, noise, garbage, rodents, dead or damaged trees, air quality, construction permits, graffiti, homelessness, street conditions, taxis and water quality. There are other categories and each one of these has it's own subcategories. Furthermore, each entry in the dataset comes with the following fields (amongst others):
@@ -25,7 +25,7 @@ The main dataset we will be using in this tutorial is based on 311 data. For tho
 
 As you can see, the dataset is very interesting and a great resource for anyone studying New York. **Nevertheless, a word of caution is necessary**: many people use this dataset to describe and analyze conditions in New York; however, the 311 data doesn't describe the city, it describes the complaints people file, it is not about the city, it is about the complaints, and even though the complaints might tell us something about the city, the distinction is crucial. Every dataset has its own biases and the 311 dataset has very strong ones: it collects data ONLY about the people who complain and ONLY about what they choose to complain about. Again, this dataset is much more about the complaints and the people who complain than about the conditions in the city. There is no 1 to 1 relationship between the 311 complaints and the conditions in the ground. That being said, though, it is still a great resource and very fun to play with. You can find out more about the 311 service [here](http://www1.nyc.gov/311/).
 
-Other datasets we will be using are (some of these you already downloaded for the first tutorial):
+Other datasets we will be using are:
 * nybb - New York City boroughs. Originally downloaded from [here](http://www.nyc.gov/html/dcp/html/bytes/districts_download_metadata.shtml).
 * Roadbed - New York roadbed. Originally downloaded [here](https://data.cityofnewyork.us/City-Government/Roadbed/xgwd-7vhd).
 * HYDRO - New York hydrography. Originally downloaded [here](https://data.cityofnewyork.us/Environment/Hydrography/drh3-e2fd).
@@ -35,37 +35,47 @@ Other datasets we will be using are (some of these you already downloaded for th
 
 ### Creating Noise Maps of 311 Data in New York City
 #### Downloading 311 Data
-The first step in this tutorial is to select, filter and download the 311 data. The [NYC Open Data portal](https://nycopendata.socrata.com/) is a great resource for data related to New York City and it provides an easy way of accessing 311 data. In it's search bar type "311" and it should take you to a list of datasets related to 311 data. The one we are looking for is called "311 Service Requests from 2010 to Present". Alternatively, you might see a big yellow icon at the top of this page related to 311; this will also take you to the dataset.
+The first step in this tutorial is to select, filter and download the 311 data. The [NYC Open Data portal](https://nycopendata.socrata.com/) is a great resource for data related to New York City and it provides an easy way of accessing 311 data. In it's search bar type "311" and it should take you to a list of datasets related to 311 data. The one we are looking for is called "311 Service Requests from 2010 to Present". Alternatively, you might see a big yellow icon at the top of this page related to 311; this will also take you to the dataset. Open the "311 Service Requests from 2010 to Present" and then click on `view data` at the top of the page.
 
 Once you've accessed the dataset you will see something like this:
 
-![311 Dataset](https://github.com/juanfrans-courses/mapping_arch_hum/blob/master/Fall_2016/Tutorials/Images/02_Data_Types_and_311/01_311_Dataset.png)
+![311 Dataset](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_23/01_311_Dataset.png)
 Here, we need to filter the database to download only the records regarding noise complaints for the first 6 months of 2016. You could attempt to download records for a longer period of time, but the files might get too large. To filter the data do the following:
 * On the right-hand panel, where it says "Filter", create a small query with the drop-down menus. Where it says `Unique Key`, change it to `Complaint Type`. Keep the `is` and then type in "Noise" in the space below (The query should read 'Complaint type is noise'. Make sure there is a check-mark next to the word 'Noise'. You will see how the dataset is filtered and you only get the complaints of type 'Noise'.
-* Next, click on `Add a New Filter Condition` and create another query that reads `Created Date` `is between` "01/1/2016 12:00:00 AM" and "07/1/2016 12:00:00 AM".
-You should now see the data only for 'Noise' complaints created between the start of 2016 and the end of June 2016.
+* Next, click on `Add a New Filter Condition` and create another query that reads `Created Date` `is between` "01/1/2017 12:00:00 AM" and "07/1/2017 12:00:00 AM".
+You should now see the data only for 'Noise' complaints created between the start of 2017 and the end of June 2017.
 * Your filters should look something like this:
 
-![311 Filters](https://github.com/juanfrans-courses/mapping_arch_hum/blob/master/Fall_2016/Tutorials/Images/02_Data_Types_and_311/02_Filters.png)
-* Finally, click on the 'Export' button at the top right-hand corner of the site and choose the 'CSV' format. Your file should start downloading then.
-* If you open your .csv file in Excel you will see that there are about 31,060 records and that they have both X and Y coordinates and Latitude and Longitude. In the next steps we will use these fields to add the 311 data to a qGIS map.
+![311 Filters](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_23/02_Filters.png)
+* Finally, click on the `Export` button at the top right-hand corner of the site and choose the `CSV` format. Your file should start downloading then.
+* If you open your .csv file in Excel you will see that there are about 25,000 records and that they have both X and Y coordinates and Latitude and Longitude. In the next steps we will use these fields to add the 311 data to an ArcMap map.
 
-#### Adding CSV data to qGIS
-* First, open qGIS and add the following layers (downloaded for the first tutorial):
+#### Adding CSV data to ArcMap
+* First, open ArcMap and add the following layers:
   * nybb
   * Roadbed
   * HYDRO
   * hydropol
 * Organize your layers so that you have the roads on top, then water for New York, then boroughs and the last the water for the country.
-* Now, to add the CSV file we downloaded, click on the `Add Delimited Text Layer` button on the top toolbar.
+* Now, to add the CSV file we downloaded, click on the `Add Data` button on the top toolbar (the one with the `+` sign).
+* In the menu that comes up, look for your .csv (311 data) file and add it to your map.
+* Once you've added your data to the map you need to create points based on some of the fields in the data. Just to check, right-click on the 311_Service_Requests layer and choose `Open`, you should see the attribute table with the data. Notice that there are columns for `Latitude` and `Longitude` and towards the end two more for `X Coordinate (State Plane)` and `Y Coordinate (State Plane)`. We can use either one of these pairs to plot points on the map. The difference is the projection these coordinates use: the first one uses WGS 1984 and the second one uses the State Plane coordinate reference system. For the purposes of this tutorial we will use latitude and longitude, but note that either one is fine, as long as you specify the corresponding coordinate reference system when you are plotting the points (in the next step). Close the attribute table.
+* Now, to actually plot points on the map do the following:
+  * Right-click again on the 311 layer and select `Display XY Data...`.
+  ![Display XY Data](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_23/04_DisplayXY.png)
+  * In the menu that appears, choose the fields for the X and the Y: `Longitude` for X and `Latitude` for Y.
+  * Finally, in the bottom part, click on `Edit` to choose the right coordinate system for this data.
+  * In the sub-menu that appears, navigate to the `Geographic Coordinate Systems` folder, in there open the `World` folder and choose `WGS 1984` as your coordinate system. Click `OK`.
+  ![Display XY Data](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_23/04_CoordinateSystem.png)
+  * Your final menu should look like this; make sure you've selected the right fields and the right coordinate system.
+  ![Display XY Data](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_23/04_DisplayXY_Menu.png)
+  * Once you click `OK` you will be asked if you want to add an `Object-ID Field` to the data, say `OK`.
+  * Your points should now be displayed.
 
-![Add CSV](https://github.com/juanfrans-courses/mapping_arch_hum/blob/master/Fall_2016/Tutorials/Images/02_Data_Types_and_311/03_Add_CSV.png)
-* In the menu that comes up, look for your .csv (311 data) file. Once you've selected your file qGIS will automatically select some presets. You should have the following options selected:
-  * File format: `CSV (comma separated values)` - (this is the format our data is in: each value is separated by a comma)
-  * Record options: `First record has field names` - (the first row of our file contains the field names)
-  * Geometry definition: `Point coordinates` - (our data has latitude and longitude data)
-  * X field: `Longitude` and Y field: `Latitude` - (these are the columns in our dataset that contain our location coordinates)
-  * Your menu should look something like this:
+
+
+
+
 
 ![CSV Menu](https://github.com/juanfrans-courses/mapping_arch_hum/blob/master/Fall_2016/Tutorials/Images/02_Data_Types_and_311/04_CSV_Menu.png)
 * Once you click `OK` you might get a warning that says that x number of records were discarded because they didn't have geometry definitions. Click `Close`. There might be some records in the dataset that we downloaded that for some reason didn't include location data.
