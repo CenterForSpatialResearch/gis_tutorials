@@ -56,7 +56,8 @@ You should now see the data only for 'Noise' complaints created between the star
   * Roadbed
   * HYDRO
   * hydropol
-* Organize your layers so that you have the roads on top, then water for New York, then boroughs and the last the water for the country.
+  * state
+* Organize your layers so that you have the roads on top, then water for New York, then boroughs, then the water for the country and the last the states.
 * Now, to add the CSV file we downloaded, click on the `Add Data` button on the top toolbar (the one with the `+` sign).
 * In the menu that comes up, look for your .csv (311 data) file and add it to your map.
 * Once you've added your data to the map you need to create points based on some of the fields in the data. Just to check, right-click on the 311_Service_Requests layer and choose `Open`, you should see the attribute table with the data. Notice that there are columns for `Latitude` and `Longitude` and towards the end two more for `X Coordinate (State Plane)` and `Y Coordinate (State Plane)`. We can use either one of these pairs to plot points on the map. The difference is the projection these coordinates use: the first one uses WGS 1984 and the second one uses the State Plane coordinate reference system. For the purposes of this tutorial we will use latitude and longitude, but note that either one is fine, as long as you specify the corresponding coordinate reference system when you are plotting the points (in the next step). Close the attribute table.
@@ -80,15 +81,16 @@ You should now see the data only for 'Noise' complaints created between the star
 #### Symbolizing the Data
 The last step in creating a qualitative map of the 311 data is a simple one: we need to symbolize each complaint using its subcategory.
 * Right-click on the 311_Data layer and choose `Properties`.
-
-----------------
-
-
-* In the `Style` tab, change the drop-down menu that says `Single Symbol` to `Categorized` and then in the `Column` menu select `Descriptor` (this is the field we will symbolize).
-* Now click on the `Classify` button at the bottom and you will get all the different sub-categories.
+* Go to the `Symbology` tab.
+* Since we will symbolize the data based on **categorical data** choose `Categories` on the left-hand panel and under `Value Field` choose `Descriptor` (this is the field that holds the subcategories of the noise complaints).
+* Now click on `Add All Values` at the bottom of the window. ArcMap will go through the data and select each individual category.
 * Lastly, you should change the appearance of the dots: adjust their size, stroke and fill color like you did for the land use map.
+* Your window should look something like this:
+![Display XY Data](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_23/05_Symbology.png)
 * Once you've adjusted that, click 'OK'.
-* Finally, you need to change the appearance of the other layers, create a print composer, add a scale bar, legend, title, source and brief description, and export your map as a PDF file.
+* Finally, you need to change the appearance of the other layers, add a scale bar, legend, title, source and brief description, and export your map as a PDF file.
+![Display XY Data](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_23/05_FinalMap.png)
+
 
 #### Creating a Quantitative Map of 311 Data
 Let's say you want to identify which census block group has the highest number of 311 noise complaints. To do this, you first have to join your 311 data to a layer containing the boundaries of New York City's census block groups.
