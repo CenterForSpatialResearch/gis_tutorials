@@ -71,47 +71,19 @@ You should now see the data only for 'Noise' complaints created between the star
   ![Display XY Data](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_23/04_DisplayXY_Menu.png)
   * Once you click `OK` you will be asked if you want to add an `Object-ID Field` to the data, say `OK`.
   * Your points should now be displayed.
-
-
-
-
-
-
-![CSV Menu](https://github.com/juanfrans-courses/mapping_arch_hum/blob/master/Fall_2016/Tutorials/Images/02_Data_Types_and_311/04_CSV_Menu.png)
-* Once you click `OK` you might get a warning that says that x number of records were discarded because they didn't have geometry definitions. Click `Close`. There might be some records in the dataset that we downloaded that for some reason didn't include location data.
-* Next, qGIS will ask you to select a coordinate reference system (map projection) for this layer. Since we are adding this data based on the latitude and longitude information (decimal degrees, as opposed to feet) we need to select the `WGS 84`, which is the coordinate system that will correctly interpret this data. You will find it under `Geographic Coordinate Systems`. You will find more information on this coordinate system [here](https://en.wikipedia.org/wiki/World_Geodetic_System). Once you select the correct coordinate system, your points will appear on the map.
-* Even though your points are already on the map, this is just a temporary layer. If you remove the layer, you will need to go through the whole importing process to add them again. To avoid this, we need to export the layer as a shapefile.
-* However before you export it, you need to select only the records that have actual coordinate data. If you open the attribute table and look at the `Latitude` or `Longitude` fields you will notice that some entries don't have any geographic data (they are `Null`). We need, therefore, to select only the features that have geographic information and export only those:
-  * Open the attribute table and click on the `Select features using an expression` button.
-
-  ![Select Features with Expression](https://github.com/juanfrans-courses/mapping_arch_hum/blob/master/Fall_2016/Tutorials/Images/02_Data_Types_and_311/14_Select_Expression.png)
-
-  * In this menu we will construct a query selecting only the features that have a `Null` value for latitude or longitude (and then we will invert that selection to get all the records that have geographic attributes and export those as a new layer).
-  * The selecting by expression menu has three different panels: the left-hand one is where you will construct your query; the middle one is where you will find the different functions, operator and, more importantly, the attribute table fields; and the right-hand panel will have a description of whatever you select in the middle panel.
-  * To build the query, expand the 'Fields and Values' drop-down menu in the middle panel and double-click on 'Latitude'. You will notice the  "Latitude" is added to the left-hand panel. Now type 'IS NULL' after that. This means that we will select only the records where the field 'Latitude' has a `Null` value.
-
-  ![Select Null](https://github.com/juanfrans-courses/mapping_arch_hum/blob/master/Fall_2016/Tutorials/Images/02_Data_Types_and_311/12_Selecting_Null.png)
-
-  * Now click on the `Select` button at the bottom right corner.
-  * Once you've selected the `Null` records, close the 'Select by expression' window (click the `Close` button). At the top of the attribute table you should read that there are around 397 features selected.
-  * Now, switch the selection, so that we only select the records that have correct geographic data. To do this press the `Invert Selection` button at the top:
-
-  ![Invert Selection](https://github.com/juanfrans-courses/mapping_arch_hum/blob/master/Fall_2016/Tutorials/Images/02_Data_Types_and_311/13_Invert_Selection.png)
-
-  * Now you should have all the records that have latitude and longitude selected and we can proceed to export them as a shapefile.
-  * Close the attribute table, right-click on the 311 layer and select `Save As...`
-  * In the menu choose the following:
-    * Format: `ESRI Shapefile` - (this is the same format of our other layers)
-    * Save as: choose the right location and name your file '311_Data'
-    * CRS: `EPSG:102718 - NAD_1983_StatePlane_New_York_Long_Island_FIPS_3104_Feet` - (this is the coordinate system we are working with and we want this layer to have the same one)
-    * Make sure you are checking the option that says `Save only selected features`, otherwise you will get an error.
-    * Uncheck `Skip attribute creation` - (you still want to retain the attributes associated with each point)
-    * Check `Add saved file to map` - (so that once you export the layer, the layer is added to your map)
-  * Once you export your layer (and it's automatically added to your map) you can remove the original one by right-clicking and choosing `Remove`.
+* Even though your points are already on the map, this is just a temporary layer. If you remove the layer, you will need to go through the whole importing process to add them again. To avoid this, we need to export the layer as a shapefile:
+  * Right-click on the new 311 layer (the one that has the points, not the .csv table) and select `Data` and `Export Data...`
+  * In the menu choose the location where you will save your new shapefile and make sure your `Save as type:` is `shapefile`.
+  * And in the main export menu, make sure that under `Use the same coordinate system as:` you select `the data frame` so that the new shapefile takes the same coordinate system as your map (which, if you added the boroughs as your first layer, should have the State Plane coordinate system).
+  * Once you export your layer, click `Yes` to add it to your map and then remove the original one and the temporary point one by right-clicking and choosing `Remove`.
 
 #### Symbolizing the Data
-The last step in creating a qualitative map of the 311 data is a simple one: we need to symbolize each complaint using its subcategory. This is very similar to what we did in the previous tutorial when we were classifying the PLUTO dataset by land use.
+The last step in creating a qualitative map of the 311 data is a simple one: we need to symbolize each complaint using its subcategory.
 * Right-click on the 311_Data layer and choose `Properties`.
+
+----------------
+
+
 * In the `Style` tab, change the drop-down menu that says `Single Symbol` to `Categorized` and then in the `Column` menu select `Descriptor` (this is the field we will symbolize).
 * Now click on the `Classify` button at the bottom and you will get all the different sub-categories.
 * Lastly, you should change the appearance of the dots: adjust their size, stroke and fill color like you did for the land use map.
@@ -185,4 +157,4 @@ Once you are finished with this go ahead and adjust colors, strokes and layer or
 ![Final Map](https://github.com/juanfrans-courses/mapping_arch_hum/blob/master/Fall_2016/Tutorials/Images/02_Data_Types_and_311/11_Final_Map.png)
 
 #### Deliverables
-Upload two (PDF) 311 data maps to Courseworks. They should both be of something different than 'noise' complaints. One should be a qualitative map, showing the location of each complaint, and the other should be a quantitative map, showing the number of complaints per census block group in New York City. Your maps should include proper legends, scale bars, titles, explanations and sources. Choose colors, line weights and fonts wisely.
+Two PDF 311 data maps. They should both be of something different than 'noise' complaints. One should be a qualitative map, showing the location of each complaint, and the other should be a quantitative map, showing the number of complaints per census block group in New York City. Your maps should include proper legends, scale bars, titles, explanations and sources. Choose colors, line weights and fonts wisely.
