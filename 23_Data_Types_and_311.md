@@ -27,7 +27,6 @@ As you can see, the dataset is very interesting and a great resource for anyone 
 
 Other datasets we will be using are:
 * nybb - New York City boroughs. Originally downloaded from [here](http://www.nyc.gov/html/dcp/html/bytes/districts_download_metadata.shtml).
-* Roadbed - New York roadbed. Originally downloaded [here](https://data.cityofnewyork.us/City-Government/Roadbed/xgwd-7vhd).
 * HYDRO - New York hydrography. Originally downloaded [here](https://data.cityofnewyork.us/Environment/Hydrography/drh3-e2fd).
 * hydropol - U.S. Hydrographic features. Originally downloaded from [here](http://www.rita.dot.gov/bts/sites/rita.dot.gov.bts/files/publications/national_transportation_atlas_database/2014/polygon).
 * tl_2015_36_bg - New York State census block groups. Originally downloaded from [here](https://www.census.gov/cgi-bin/geo/shapefiles/index.php). Here you should download the census block groups for New York state for 2015.
@@ -57,19 +56,22 @@ You should now see the data only for 'Noise' complaints created between the star
   * HYDRO
   * hydropol
   * state
-* Organize your layers so that you have the roads on top, then water for New York, then boroughs, then the water for the country and the last the states.
+* Organize your layers so that you have the water for New York on top, then boroughs, then the water for the country and the last the states.
 * Now, to add the CSV file we downloaded, click on the `Add Data` button on the top toolbar (the one with the `+` sign).
 * In the menu that comes up, look for your .csv (311 data) file and add it to your map.
 * Once you've added your data to the map you need to create points based on some of the fields in the data. Just to check, right-click on the 311_Service_Requests layer and choose `Open`, you should see the attribute table with the data. Notice that there are columns for `Latitude` and `Longitude` and towards the end two more for `X Coordinate (State Plane)` and `Y Coordinate (State Plane)`. We can use either one of these pairs to plot points on the map. The difference is the projection these coordinates use: the first one uses WGS 1984 and the second one uses the State Plane coordinate reference system. For the purposes of this tutorial we will use latitude and longitude, but note that either one is fine, as long as you specify the corresponding coordinate reference system when you are plotting the points (in the next step). Close the attribute table.
 * Now, to actually plot points on the map do the following:
   * Right-click again on the 311 layer and select `Display XY Data...`.
+
   ![Display XY Data](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_23/04_DisplayXY.png)
   * In the menu that appears, choose the fields for the X and the Y: `Longitude` for X and `Latitude` for Y.
   * Finally, in the bottom part, click on `Edit` to choose the right coordinate system for this data.
   * In the sub-menu that appears, navigate to the `Geographic Coordinate Systems` folder, in there open the `World` folder and choose `WGS 1984` as your coordinate system. Click `OK`.
-  ![Display XY Data](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_23/04_CoordinateSystem.png)
+
+  ![Coordinate System](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_23/04_CoordinateSystem.png)
   * Your final menu should look like this; make sure you've selected the right fields and the right coordinate system.
-  ![Display XY Data](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_23/04_DisplayXY_Menu.png)
+
+  ![Display XY Menu](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_23/04_DisplayXY_Menu.png)
   * Once you click `OK` you will be asked if you want to add an `Object-ID Field` to the data, say `OK`.
   * Your points should now be displayed.
 * Even though your points are already on the map, this is just a temporary layer. If you remove the layer, you will need to go through the whole importing process to add them again. To avoid this, we need to export the layer as a shapefile:
@@ -86,31 +88,34 @@ The last step in creating a qualitative map of the 311 data is a simple one: we 
 * Now click on `Add All Values` at the bottom of the window. ArcMap will go through the data and select each individual category.
 * Lastly, you should change the appearance of the dots: adjust their size, stroke and fill color like you did for the land use map.
 * Your window should look something like this:
-![Display XY Data](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_23/05_Symbology.png)
+
+![Symbology](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_23/05_Symbology.png)
 * Once you've adjusted that, click 'OK'.
 * Finally, you need to change the appearance of the other layers, add a scale bar, legend, title, source and brief description, and export your map as a PDF file.
-![Display XY Data](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_23/05_FinalMap.png)
 
+![Final Map](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_23/05_FinalMap.png)
 
 #### Creating a Quantitative Map of 311 Data
 Let's say you want to identify which census block group has the highest number of 311 noise complaints. To do this, you first have to join your 311 data to a layer containing the boundaries of New York City's census block groups.
 * First, add the census block group shapefile (tl_2015_36_bg) you downloaded from the census website.
 * Move this layer so that it's located below the HYDRO layer.
-* If you zoom out, you will notice that this layer includes the census block groups for the whole State. However, we only need the ones for New York City. To select just these block groups we will use the 'select by attributes' method, which means selecting based on data in one of the fields of the layer. The census block group layer contains a field listing the specific county each block group is located in; we will use this field to select only the census block groups located in any of the 5 counties that make up New York City:
-  * First, right-click on the census block group layer and select `Open Attribute Table`. Here you will see the data associated with each of the census block groups. The second column, the one called 'COUNTYFP', contains the county identifiers, and this is the one we will use to select only the New York City block group.
-  * Now we need to select all the census block groups that have as their 'COUNTYFP' '005' (Bronx), '061' (Manhattan), '047' (Brooklyn), '081' (Queens) or '085' (Staten Island). To do this click on the `Select features using and expression` button. In this menu we will construct a query selecting only the features that have any of these numbers for their 'COUNTYFP' value.
+* If you zoom out, you will notice that this layer includes the census block groups for the whole State. However, we only need the ones for New York City. To select just these block groups we will use the `select by attributes` method, which means selecting based on data in one of the fields of the layer. The census block group layer contains a field listing the specific county each block group is located in; we will use this field to select only the census block groups located in any of the 5 counties that make up New York City:
+  * First, right-click on the census block group layer and select `Open Attribute Table`. Here you will see the data associated with each of the census block groups. The second column, the one called `COUNTYFP`, contains the county identifiers, and this is the one we will use to select only the New York City block group.
+  * Now we need to select all the census block groups that have as their COUNTYFP `005` (Bronx), `061` (Manhattan), `047` (Brooklyn), `081` (Queens) or `085` (Staten Island). Close the attribute table.
+  * To select features based on attributes click on `Selection` and `Select by Attributes...` In this menu we will construct a query selecting only the features that have any of these numbers for their `COUNTYFP` value.
 
-  ![Attribute Table](https://github.com/juanfrans-courses/mapping_arch_hum/blob/master/Fall_2016/Tutorials/Images/02_Data_Types_and_311/05_Attribute_Table.png)
+  ![Final Map](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_23/06_SelectByAttributes.png)
 
-  * To build the query, expand the 'Fields and Values' drop-down menu in the middle panel and double-click on 'COUNTYFP'. You will notice the  "COUNTYFP" is added to the left-hand panel. Now type '=' after that and then click on the `all unique` button below the right-hand panel; this will show a list of all the unique values this field contains. Double-click on '005' to complete the first part of the query on the left-hand panel.
-  * The query so far reads "COUNTYFP" = '005'. Notice that the '005' is under single quotation marks. This is because the value is a string (text), not a number. If it was a number you would only type 5, without quotations, and you would be able to do normal math operations with it. Instead, since it's a string, you have to type it with quotations and it behaves like text.
-  * Now we need to add the other possibilities, with the operator `or` which we could type or select from the 'Operators' menu. Your final query should read something like this: `"COUNTYFP" = '005' or "COUNTYFP" = '047' or "COUNTYFP" = '061' or "COUNTYFP" = '081' or "COUNTYFP" = '085'`.
+  * First, at the top, select the appropriate layer.
+  * Then, double-click on the field that we will use ("COUNTYFP") to make it appear in the bottom panel.
+  * Now type `=` so that it appears after the "COUNTYFP" in the bottom panel.
+  * Now click on the `Get Unique Values` button so that the program displays all the possible values for that field. As we said above, we will select features where "COUNTYFP" is `005` or `061` or `047` or `081` or `085`.
+  * Double-click on `005` to make is appear in the bottom panel.
+  * Now, click on the `Or` button (or you can type it too), and then again on "COUNTYFP" and then the `=` sign and then the next number. Do this for all the numbers.
+  * At the end, along with the text above this last panel you can read the query as if it was a phrase: `SELECT * FROM tl_2015_36_bg WHERE: "COUNTYFP" = '005' OR "COUNTYFP" = '061' OR "COUNTYFP" = '047' OR "COUNTYFP" = '081' OR "COUNTYFP" = '085'` (the `*` means all, so you are saying, select all the records where "COUNTYFP" is this, or that, or that...).
+  * Before you click `OK`, click `Apply`. If all is fine, you should see the selected features highlighted in blue. If all the ones for New York City are highlighted, click `OK`.
 
-  ![Selection Query](https://github.com/juanfrans-courses/mapping_arch_hum/blob/master/Fall_2016/Tutorials/Images/02_Data_Types_and_311/06_Selection_Query.png)
-
-  * Click the 'Select' button on the bottom-right side to select those features that match your query; then close your selection menu and your attribute table. You should see all the census block groups for New York City highlighted in yellow.
-
-  ![Selected Block Groups](https://github.com/juanfrans-courses/mapping_arch_hum/blob/master/Fall_2016/Tutorials/Images/02_Data_Types_and_311/07_Selected_Block_Groups.png)
+  ![Final Map](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_23/06_Selection_Query.png)
 
   * Finally, to create a shapefile with only the selected features, right-click on the census block group layer and select `Save As...`. In the next menu choose the following settings:
     * Format: `ESRI Shapefile`
