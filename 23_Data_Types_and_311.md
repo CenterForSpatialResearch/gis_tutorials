@@ -115,53 +115,41 @@ Let's say you want to identify which census block group has the highest number o
   * At the end, along with the text above this last panel you can read the query as if it was a phrase: `SELECT * FROM tl_2015_36_bg WHERE: "COUNTYFP" = '005' OR "COUNTYFP" = '061' OR "COUNTYFP" = '047' OR "COUNTYFP" = '081' OR "COUNTYFP" = '085'` (the `*` means all, so you are saying, select all the records where "COUNTYFP" is this, or that, or that...).
   * Before you click `OK`, click `Apply`. If all is fine, you should see the selected features highlighted in blue. If all the ones for New York City are highlighted, click `OK`.
 
-  ![Final Map](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_23/06_Selection_Query.png)
+  ![Final Map](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_23/07_Selected_Block_Groups.png)
 
-  * Finally, to create a shapefile with only the selected features, right-click on the census block group layer and select `Save As...`. In the next menu choose the following settings:
-    * Format: `ESRI Shapefile`
-    * Save as: choose the right location and name your file 'NYC_BlkGrp'
-    * CRS: `EPSG:102718 - NAD_1983_StatePlane_New_York_Long_Island_FIPS_3104_Feet`
-    * Check `Save only selected features` - (this one is very important; if you don't check it you will just export a copy of your original layer with all the features, selected or not)
-    * Uncheck `Skip attribute creation` - (you still want to retain the attributes associated with each point)
-    * Check `Add saved file to map` - (so that once you export the layer, the layer is added to your map)
-  * Click `OK` and you should see a new layer with only New York City block groups.
-* Now we need to join the 311 data to the census block groups and get a count of how many complaints are in each block group. To do this, click on `Vector` `Analysis Tools` `Points in Polygon...`
+  * Finally, to create a shapefile with only the selected features, right-click on the census block group layer and select `Data` and `Export Data...`
+  * In the menu choose the location where you will save your new shapefile and make sure your `Save as type:` is `shapefile`.
+  * And in the main export menu, make sure that under `Use the same coordinate system as:` you select `the data frame` so that the new shapefile takes the same coordinate system as your map (which, if you added the boroughs as your first layer, should have the State Plane coordinate system).
+  * Once you export your layer, click `Yes` to add it to your map and then remove the one with the block groups for the whole state by right-clicking and choosing `Remove`.
+* Now we need to join the 311 data to the census block groups and get a count of how many complaints are in each block group. To do this right-click on the new block group layer (the one we will join the data **to**) and select `Joins and Relates` and then `Join...`.
 
-![Points in Polygon](https://github.com/juanfrans-courses/mapping_arch_hum/blob/master/Fall_2016/Tutorials/Images/02_Data_Types_and_311/08_Points_in_Polygon.png)
+![Spatial Join Menu](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_23/08_SpatialJoin.png)
 
-* In the 'Points in Polygon' menu choose the following settings:
-  * Input polygon vector layer: 'NYC_BlkGrp' - (this is the polygon layer we will join the points to)
-  * Input point vector layer: '311_Data' - (this is the layer containing the points that will be joined)
-  * Output count field name: '311_Count' - (this is a new field that will be created and will contain the count of points that were joined to each block group)
-  * Output shapefile: '311_BlkGrp'
-  * Check `Add result to canvas` so the new shapefile is added to the map.
-* Once you have all your settings ready, click `OK` and let it run. Once it's done, click `Close`. You will see your new layer on the map.
-* If you right-click on the new layer (311_BlkGrp) and choose 'Open Attribute Table' you will see that the last field is called '311_Count' and it contains the number of points joined to each block group. We will use this field to symbolize the block groups.
-* To actually symbolize the layer, right-click on it and choose `Properties`, and in the Style tab change the 'Single Symbol' drop-down menu to 'Graduated'.
-* Next, in the 'Column' drop-down menu select the '311_Count' field to symbolize and click on the `Classify` button to load the values.
-* You will notice that qGIS automatically classifies the values into 5 categories. Also, if you look at the settings on the top right-hand side you will see that the software uses an 'Equal Interval' method for this classification. However, if you click `OK` and look at the resulting map you will notice that most block groups fall within the first group, the one that goes from 0 - 145.8 and that very few are fall in the other ones. In fact, it seems like there is one single block group with more than 400 complaints (located in Queens), which is skewing the whole classification method upwards. This is clearly an outlier and the classification method should not be based on this particular block group.
-* Instead, go back to the properties and change the classification method to 'Natural Breaks (Jenks)' which deals better with datasets that are not normally distributed. You can find out more about this classification method [here](https://en.wikipedia.org/wiki/Jenks_natural_breaks_optimization).
+* In the "Join Data" window, in the drop-down menu at the top select `Join data from another layer based on spatial location` (if we were joining data based on an attribute (like when you join census data) you would select `Join attributes from a table`).
+* Next, choose the layer that you want to join to this layer. In our case that would be the layer with the 311 data.
+* Finally, since we are not doing any math operations with the 311 data (average, sum or other), you can just choose the location where you want to save your new file and click `OK`.
+
+![Spatial Join Menu](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_23/08_SpatialJoinMenu.png)
+
+* If you right-click on the new layer and choose 'Open Attribute Table' you will see that the last field is called `Count_` and it contains the number of points joined to each block group. We will use this field to symbolize the block groups.
+* To actually symbolize the layer, right-click on it and choose `Properties`, and in left-hand panel in the `Symbology` tab choose `Quantities`.
+* In the `Value` drop-down menu under `Fields` choose `Count_` as the field we will symbolize.
+* You will notice that ArcMap automatically classifies your values into 5 categories using the "[Natural Breaks (Jenks)](https://en.wikipedia.org/wiki/Jenks_natural_breaks_optimization)" method. This is actually the right way of classifying this type of data, which is not normally distributed.
+* Click on the `Classify` button to explore this further.
+* First, we should exclude the block groups that have zero 311 complaints. To do this click on the `Exclusion...` button. This will open a similar window to the one we used to select by attributes.
+  * Here, write a brief query that excludes the block groups that have a `Count_` of zero: `"Count_" = 0`. Click `OK`.
+
+  ![Exclusion](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_23/10_Exclusion.png)
+* Now you will see a histogram of your data. Play around with other classification methods to see how they work. When you are done exploring, choose `Natural Breaks (Jenks)` and click `OK`.
 * You can change your color ramp or the individual colors or strokes of each of the classes. You can also change the number of classes the data is divided into but note that normally, we can only really differentiate between 5 or 6 classes.
 * Once you are done with the classification, click `OK` to apply it to the layer and see your results on the map.
 
-![Classification Methods](https://github.com/juanfrans-courses/mapping_arch_hum/blob/master/Fall_2016/Tutorials/Images/02_Data_Types_and_311/09_Classification_Methods.png)
+![Classification Methods](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_23/09_Classification_Methods.png)
 
-Lastly, we need to hide the census block groups that fall outside of the New York City borough boundaries. If you look closely at the census block group layer, you will see that there are some block groups that fall inside the Hudson River and that shouldn't be included in our map.
 
-There are a couple of ways of doing this: one option would be to clip the block group layer using the borough layer, in order to get rid of the census block groups that fall outside the boroughs. However, this option would permanently modify the block group layer and, if at any point the borough boundaries don't align perfectly with the block groups (which is entirely possible), the geometry of those block groups would be changed too. The best option then is to hide the block groups that fall inside the water and conveniently enough there is a field in the block group attribute table that has a specific value for these features.
-* First, open the attribute table of the census block group layer. You will notice that there is a field called 'ALAND' and another called 'AWATER'. 'ALAND' one has a unique identifier for each of the block groups that has some land area; 'AWATER' has an identifier for those block groups that have some water. There problem is that some block groups have both water and land. So we will only show those block groups where the 'ALAND' field does not equal 0, meaning that they have some land.
-* To do this we will create a 'Feature subset'. Open the layer properties and go to the `General` tab. At the bottom of this tab you will see the 'Feature subset' panel. Go to the bottom of this panel and click on the `Query Builder` button. This query builder will work in a similar way as the 'Selection by attributes' query builder.
-* In the 'Fields' panel you will see the 'ALAND' field. Double-click on this to make it appear in the bottom panel ('Provider specific filter expression').
-* Now add '!= 0' to the expression. ('!=' means 'does not equal').
-* Your expression should look something like this:
+Once you are finished with this go ahead and adjust colors, strokes and layer order. And finally, add a legend, title, explanation, source and a scale bar, and export your map as a PDF file. Your final map should look something like this:
 
-![Query Builder](https://github.com/juanfrans-courses/mapping_arch_hum/blob/master/Fall_2016/Tutorials/Images/02_Data_Types_and_311/10_Query_Builder.png)
-
-* Click `OK` in the 'Query Builder' and then `OK` again in the 'Properties' panel. Your map should now only show the census block groups that have land.
-
-Once you are finished with this go ahead and adjust colors, strokes and layer order. And finally, create a print composer, add a legend, title, explanation, source and a scale bar, and export your map as a PDF file. Your final map should look something like this:
-
-![Final Map](https://github.com/juanfrans-courses/mapping_arch_hum/blob/master/Fall_2016/Tutorials/Images/02_Data_Types_and_311/11_Final_Map.png)
+![Final Map](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_23/11_Final_Map.png)
 
 #### Deliverables
 Two PDF 311 data maps. They should both be of something different than 'noise' complaints. One should be a qualitative map, showing the location of each complaint, and the other should be a quantitative map, showing the number of complaints per census block group in New York City. Your maps should include proper legends, scale bars, titles, explanations and sources. Choose colors, line weights and fonts wisely.
