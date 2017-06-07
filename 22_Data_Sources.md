@@ -15,6 +15,8 @@ The `X` Drive has a wealth of information primarily about New York City but also
   * [Building footprints](https://data.cityofnewyork.us/Housing-Development/Building-Footprints/nqwf-w8eh)
   * [NYC Planimetrics](https://data.cityofnewyork.us/Transportation/NYC-Planimetrics/wt4d-p43d/data): including Boardwalk, Building Footprint, Cooling Towers, Curb, Elevation, Hydro Structure, Hydrography, Median, Open Space, Park, Parking Lot, Pavement Edge, Plaza,, Railroad, Railroad Structure, Retaining Wall, Roadbed, Shoreline, Sidewalk, Sidewalk Centerline, Swimming Pool, Transport Structure, Under Construction
   * [311 Complaints](https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9/data)
+  * [Hurricane evacuation zones](https://data.cityofnewyork.us/Public-Safety/Hurricane-Evacuation-Zones/uihr-hn7s/data)
+  * [Hydrography](https://data.cityofnewyork.us/Environment/Hydrography/drh3-e2fd)
 * [Bytes of the BIG APPLE](http://www1.nyc.gov/site/planning/data-maps/open-data.page) (datasets by the NYC Department of City Planning):
   * PLUTO: building lots, including data for zoning, special purpose districts, land use, built and lot areas, year built, etc.
   * NYC GIS Zoning Features: zoning districts, special purpose districts, special purpose district subdistricts, limited height districts, commercial overlay zones, and zoning map amendments.
