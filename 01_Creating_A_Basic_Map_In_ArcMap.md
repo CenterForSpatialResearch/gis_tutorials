@@ -1,9 +1,9 @@
 # Creating a Basic Map in ArcMap
 
-*This tutorial will cover some basics of the ArcMap user interface, using map symbology, and creating a map layout. In this tutorial we use data similar to the following, although any other GIS datasets will also work:
+*This tutorial will cover some basics of the ArcMap user interface, using map symbology, and creating a map layout. In this tutorial we use data similar to the following, although any other GIS datasets will also work:*
 * [PLUTO](http://www1.nyc.gov/site/planning/data-maps/open-data.page)
 * [Parks Properties](https://data.cityofnewyork.us/City-Government/Parks-Properties/rjaj-zgq7/data)
-* [Hydrography](https://data.cityofnewyork.us/Environment/Hydrography/drh3-e2fd)*
+* [Hydrography](https://data.cityofnewyork.us/Environment/Hydrography/drh3-e2fd)
 
 ![t1-1.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_01/t1_1.PNG)
 
