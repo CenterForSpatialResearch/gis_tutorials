@@ -86,7 +86,7 @@ In the `Download` dialog box, select the option for “Shapefiles (.zip)” at t
 
 ## Preparing FactFinder Data for Importing and Joining into ArcMap
 
-Unzip the .zip file of the dataset you downloaded for Gross Rent. Open the `.csv` file in Microsoft Excel. 
+Unzip the .zip file of the dataset you downloaded for Gross Rent. Open the `.csv` file in Microsoft Excel.
 
 ![t11-11.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_11/t11-11.png)
 
@@ -112,7 +112,7 @@ Once the modifications to the table are made, save the file in an Excel Workbook
 ## Joining Excel Table to TIGER Shapefile in ArcMap
 
 Open ArcMap and new blank map. Add the TIGER shapefile you unzipped to the map. You may have to `connect to folder` to locate the file. The shapefile will now be displayed on the map. Next add the Excel table to the map using the same technique. Please be aware that it will not correctly load unless you have closed the file in Excel first.
- 
+
 ![t11-17.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_11/t11-17.png)
 
 ![t11-18.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_11/t11-18.png)
@@ -121,14 +121,14 @@ Note that in the attribute table for the TIGER file, the field name `GEO_ID` mat
 
 ![t11-19.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_11/t11-19.png)
 
-Right click on the layer name of the TIGER file and select `Joins & Relates` and then `Joins`. 
+Right click on the layer name of the TIGER file and select `Joins & Relates` and then `Joins`.
 
 ![t11-20.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_11/t11-20.png)
 
 In the dialog box that appears, make sure the dropdown menu asking `What do you want to join to this layer?` is set to `Join attributes from a table.` Using the `GEO_ID` field for the tiger file, select the table to join to the layer and use the ID field you renamed in Excel containing the 20-digit Geo ID code. Ensure the `Keep all records` option is checked and select `OK`.
 
 ![t11-21.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_11/t11-21.png)
- 
+
 You can now open to attribute table of the TIGER file to view the joined dataset.
 
 ![t11-22.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_11/t11-22.png)

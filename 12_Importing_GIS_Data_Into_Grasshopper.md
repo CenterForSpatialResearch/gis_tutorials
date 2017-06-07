@@ -10,7 +10,7 @@ TT Toolbox can be downloaded [here](http://www.food4rhino.com/project/tttoolbox?
 
 This exercise uses a building footprint shapefile and visualizes the height of the buildings by extruding with height data in the shape file’s attributes.
 
-For this exercise, we will be using Building Footprint data for NYC from the BYTES of the BIG APPLE PLUTO files shapefile found here: 
+For this exercise, we will be using the [Building Footprint](https://data.cityofnewyork.us/Housing-Development/Building-Footprints/nqwf-w8eh) dataset for NYC Open Data.
 
 Open ArcMap. (You will find it in your start menu under `Programs` > `ArcGIS` > `ArcMap`)
 
@@ -82,7 +82,7 @@ You should now see the field name in the panel connected to `A` and the values i
 
 ![t12-11.png](https://github.com/jai2125/gis_tutorials/blob/master/Images/Tutorial_12/t12-11.png)
 
-Create a `Unit Z` Vector component and connect the `B` output of the `Split List` to the factor `F` input of the `Unit Z` Vector. 
+Create a `Unit Z` Vector component and connect the `B` output of the `Split List` to the factor `F` input of the `Unit Z` Vector.
 
 Create an `Extrude` component, and connect the surfaces of building footprints from the `Boundary Surface` component’s `S` output to the `Extrude` components Base `B` input. Then connect the `Unit Z` Vector’s output (V) to the `Extrude` component’s `Direction` (D) input.
 
