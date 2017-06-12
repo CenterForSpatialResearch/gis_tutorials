@@ -54,23 +54,23 @@ Questions can be directed to [GIS TA], ([your email]), the GIS student coordinat
 *Copy Folder to D Drive*
 
 **Session 1:**
-1. Brief GIS presentation (power point)
+* Brief GIS presentation (power point)
   * What’s GIS?
   * What is it for?
   * Resources at GSAPP and Columbia (classes, labs, people)
-2. Overview of the X drive, file types, and GSAPP Website.
+* Overview of the X drive, file types, and GSAPP Website.
   * Data:
     * X drive (brief explanation; go into further detail later)
     * types of files (shapefiles, rasters)
     * EDS at Lehman Library
     * Other sources online
   * Other resources on the GSAPP web site (tutorials, tips, C4SR, etc)
-3. X drive.
+* X drive.
   * How to connect to the X drive
   * Where is it
   * What kind of data does it have
   * How to use it
-4. Different programs in ArcGIS.
+* Different programs in ArcGIS.
   * ArcCatalog
 	  * What is it
 	  * What does it look like
@@ -88,7 +88,7 @@ Questions can be directed to [GIS TA], ([your email]), the GIS student coordinat
 	  * Measurement tool
   * Projections
 	  * Show slides on different projection types
-5. Exercise 1 (creating a map)
+* Exercise 1 (creating a map)
   * attribute table
 	  * opening
 	  * selecting
@@ -107,7 +107,7 @@ Questions can be directed to [GIS TA], ([your email]), the GIS student coordinat
 	  * ArcToolbox
 	  * export to CAD tool
 	  * import from CAD
-6. Exercise 2 (selection techniques)
+* Exercise 2 (selection techniques)
   * projection systems (brief explanation)
 	  * arc help
   * selecting
@@ -120,7 +120,7 @@ Questions can be directed to [GIS TA], ([your email]), the GIS student coordinat
 	  * creating buffers
 	  * selecting by location
 	  * selecting by attributes
-7. Exercise 3 (symbolizing, exporting and clipping)
+* Exercise 3 (symbolizing, exporting and clipping)
   * symbolizing
 	  * using the color ramp
 	  * changing the labels
@@ -131,7 +131,7 @@ Questions can be directed to [GIS TA], ([your email]), the GIS student coordinat
   * clipping
 	  * creating buffer
 	  * using the clip tool
-8. Exercise 4 (attribute table operations)
+* Exercise 4 (attribute table operations)
   * working with the attribute table
 	  * adding fields
 	  * editor tool
@@ -142,11 +142,11 @@ Questions can be directed to [GIS TA], ([your email]), the GIS student coordinat
 	  * 3d topography from point data, contour lines, or raster
 
 **Session 2:**
-1. Web Site.
+* Web Site.
   * Tutorials
   * USGS site
   * CUGIR
-2. Exercise 1.
+* Exercise 1.
   * ArcScene
     * copy folder from the x drive (Arch GIS tutorial 2)
     * open ArcScene
@@ -159,7 +159,7 @@ Questions can be directed to [GIS TA], ([your email]), the GIS student coordinat
   * Base Heights
     * base height from attribute
     * base height from surface
-3. Exporting to Google Earth
+* Exporting to Google Earth
   * Xtools Pro
     * open ArcMap
     * add columbia_building_footprints
@@ -170,7 +170,7 @@ Questions can be directed to [GIS TA], ([your email]), the GIS student coordinat
     * Change file extension type
     * change extrusion conversion factor
     * change display colors
-4. Exporting 3D models from ArcScene
+* Exporting 3D models from ArcScene
   * ArcScene (exporting)
     * add columbia_building_footprint
     * extrude buildings
@@ -184,14 +184,14 @@ Questions can be directed to [GIS TA], ([your email]), the GIS student coordinat
   * Max (importing)
     * open Max
     * if .3ds you have to rotate
-5. Topographic Surfaces
+* Topographic Surfaces
   * new ArcScene map
   * add file ned_xxxxxx
   * properties/base height/obtain heights from layer
   * factor x2
   * symbology (change color)
   * problems exporting
-6. How to get topographic files
+* How to get topographic files
   * CUGIR
     * go to web site
     * type topographic
