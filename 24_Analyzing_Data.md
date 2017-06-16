@@ -45,7 +45,7 @@ Right-click `Layers`, choose `Add Data...`, and navigate to the folder where you
 * Bronx_Schools.shp
 * Bronx_Libraries.shp
 
-![add](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_24/01_Layers.png)
+![add](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_24/01_Layers.PNG)
 
 In the layers panel, right-click each data layer and choose `Open Attribute Table` to inspect its contents.
 
@@ -90,19 +90,19 @@ Now, we want to determine which libraries are located within census tracts where
 
 * **Navigate** to menu item `Selection` > `Select by Attributes`. Make sure that `Bronx_Tracts_2014` is the active selection layer and the selection method is set to `Create a new selection`. **Double-click** `Pct_Spanis`, **click** `>`, and **type** `65`. Your expression should look like this: `"Pct_Spanis" > 65`. Click `OK`. In the bottom-left corner of the ArcMap window, you should see that 56 features were selected.
 
-![location](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_24/02_SelectionExpression.png)
+![location](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_24/02_SelectionExpression.PNG)
 
 * **Right-click** on the `Bronx_Tracts_2014` layer and choose `Selection` > `Create Layer From Selected features`. A new layer will appear on top. Clear selection by navigating to menu item `Selection` > `Clear Selected Features`. **Right-click** on the new layer and choose `Properties...` In the `General` tab, rename the layer to `Bronx_Tracts_Spanish`. In the `Symbology` tab, choose a fill color that differs from the `Bronx_Tracts_2014` layer. Arrange the layer order so that schools and libraries are the top two layers.
 
-![location](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_24/03_NewLayer.png)
+![location](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_24/03_NewLayer.PNG)
 
 * Now we will determine which libraries lie within these census tracts by using the select by location tool. **Navigate** to menu item `Selection` > `Select by Location...` Set the target layer to `Bronx_Libraries` and the source layer to `Bronx_Tracts_Spanish`. Set the selection method for target layer features to `are within the source layer feature` and click `OK`. Your selections should look like this:
 
-![location](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_24/04_SelectByLocation.png)
+![location](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_24/04_SelectByLocation.PNG)
 
 * Open the attribute table of the `Bronx_Libraries` layer in order to note which libraries were selected. Four libraries were selected, what are their names?
 
-![location](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_24/05_Attribute.png)
+![location](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_24/05_Attribute.PNG)
 
 This analysis give us a very rough sense of which libraries might already serve a large number of Spanish speakers however we have only selected libraries which are located exactly within census tracts with a large proportion of Spanish speakers. What is there is a library in an adjacent census tract? Our analysis will not have picked up on this.
 
@@ -123,14 +123,14 @@ We will be creating a number of new layers during this portion of the exercise s
 * Navigate to menu item `Selection` > `Clear Selected Features` to deselect the libraries.
 * Navigate to menu item `Geoprocessing` > `Buffer`.
 
-![buffer](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_24/06_Buffer.png)
+![buffer](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_24/06_Buffer.PNG)
 
   * Set Input Features to `Bronx_Libraries` – this sets which layer the buffers are drawn around.
   * Set the Output Feature Class to `BX_Library_QuarterMiBuffer.shp` within your 'MyShapes' folder.
   * Set the buffer distance to 0.25 and set the unit to Miles.
   * Click `OK`. Your map should look something like the following:
 
-![location](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_24/07_Buffer_map.png)
+![location](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_24/07_Buffer_map.PNG)
 
 * Next we will use the select by location tool to determine which schools fall within ¼ mile of a library. Navigate to menu item `Selection`>`Select By Location`
   * Set Target Layer to `Bronx_Schools` and Source Layer to `BX_Library_QuarterMiBuffer`. Keep the selection method for target layer features to `interect the source layer feature`.
@@ -152,7 +152,7 @@ We will be creating a number of new layers during this portion of the exercise s
     * Save the output shapefile within 'MyShapes' as `Library_QuartMiBuffer_SchoolsJoin`.  
     * Click `OK`.
 
-![location](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_24/08_SpatialJoin.png)
+![location](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_24/08_SpatialJoin.PNG)
 
 
   * Note that `Library_QuarterMiBuffer_SchoolsJoin` has now been added to your map as a layer.
@@ -161,7 +161,7 @@ We will be creating a number of new layers during this portion of the exercise s
 
   * Which five libraries serve the greatest number of enrolled school children. Sort the attribute table by SUMEnrollment and identify the top five libraries.
 
-![location](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_24/09_SumEnroll.png)
+![location](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_24/09_SumEnroll.PNG)
 
 **Save** your map project
 
@@ -171,20 +171,20 @@ We will be creating a number of new layers during this portion of the exercise s
 
   *  Navigate to `Geoprocessing` > `ArcToolbox` > `Analysis Tools` > `Proximity` > `Near`  
 
-![location](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_24/10_Near.png)
+![location](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_24/10_Near.PNG)
 
   * Set Input Features to `Bronx_Schools`. The input features is the layer that the distance of the near features will be measured in relation to.
   * Set Near Features to `Bronx_Libraries`.
   * Click `OK`.
   * Open Attribute Table of the `Bronx_Schools` layer. You will notice that we have generated two new fields: `NEAR_FID` and `NEAR_DIST`. `NEAR_FID` is the identifier of the nearest library matched with each school, and `NEAR_FID` is the distance between them in feet. We will use this identifier to add  the name of the nearest library for each school the table.  
 
-  ![location](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_24/11_Near.png)  
+  ![location](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_24/11_Near.PNG)  
 
   * **Right-click** `Bronx_Schools` and choose `Joins and Relates` > `Join...`.
   * Choose `Join Attributes from a Table` from the drop-down menu. Set the field in this layer that the join will be based on to `NEAR_FID`. Set `Bronx_Libraries` as the table to join to this layer. Choose the field in the table that the join will be based on to `FID`. You can keep only the matching records.
   * Click `OK` and open the attribute table of the `Bronx_Schools` layer. Notice that we now have names of the nearest libraries added to the table.
 
-![location](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_24/12_TableJoin.png)
+![location](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_24/12_TableJoin.PNG)
 
 ##### Making Estimates
 We now have gathered information about how many schools are within ¼ mile of each library, as well as the total number of children enrolled in those schools and we have also computed the nearest library to each school. Now we would like to determine more generally how many people live near libraries in the Bronx – i.e. how many people do Bronx libraries serve?
@@ -198,17 +198,17 @@ For our first approximation we will ask: how many people live in the census trac
 * Navigate to menu item `Selection`>`Select by location`.
 * Set the Target Layer to `Bronx_Tracts_2014`. Set the Source Layer to `BX_Library_QuarterMiBuffer`. Leave the selection method to `intersect  the source layer feature`.
 
-![location](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_24/13_Select.png)
+![location](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_24/13_Select.PNG)
 
 * Click `Apply`.
 * Your selections should look something like this:
-![location](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_24/14_Selection.png)
+![location](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_24/14_Selection.PNG)
 
 * We can already tell that this will be a very coarse way to estimate the population served by each of the Bronx libraries because some census tracts which intersect our buffers are very large and portions of the tract are very far away from any library.
 
 * Despite this we now want to add up the total population within these selected census tracts.  To determine the total population of all of the census tracts that intersect a ¼ mile buffer of a Bronx library. To do this we will use the `Summary Statistics` tool. Navigate to  `Geoprocessing` > `ArcToolbox` > `Analysis Tools` > `Statistics` > `Summary Statistics`. Set the Input Table to `Bronx_Tracts_2014`. Save the Output Table to `Bx_Tracts_Stats`. Set the Statistics Field to `Pop2014` and `Statistics Type` to `SUM`. Click `OK`.
 
-![location](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_24/15_Summary.png)
+![location](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_24/15_Summary.PNG)
 
 * A new table has been generated. We see that the total population of all of the census tracts that intersect a ¼ mile buffer around a Bronx library is 988,651. Make a note of this total we will compare it to the result we get in the next portion of the exercise.
 
@@ -227,11 +227,11 @@ Note: that proportional split estimation assumes that the attribute you are esti
 * Name the filed `Area`, of type `Double`.
 * Click `OK`.
 
-![location](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_24/16_Area.png)  
+![location](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_24/16_Area.PNG)  
 
 * Right-Click on the `Area` field and choose `Calculate Geometry`. Ignore warnings. Set the Property to `Area` and click `OK`.
 
-![location](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_24/17_CalculateGeometry.png)
+![location](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_24/17_CalculateGeometry.PNG)
 
 
 * Scroll to the right in the attribute table for the Bronx census tracts and see the new field that you have added.
@@ -249,7 +249,7 @@ Note: that proportional split estimation assumes that the attribute you are esti
 * Toggle the visibility of all of the layers on your map off except for `BXTracts_LibraryQuartMiClip`.
 * Use the Identify tool to click on some of the individual clipped census tract polygons to familiarize yourself with this new layer.  
 
- ![location](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_24/18_Clip.png)
+ ![location](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_24/18_Clip.PNG)
 
 **Calculating the area of the clipped census tracts**  
 
@@ -259,7 +259,7 @@ Note: that proportional split estimation assumes that the attribute you are esti
 * Name the field `AreaClip`, of type `Double`. Click `OK`.
 * Notice the new field that has been added to the far right of the attribute table called `AreaClip`. Right-Click on `AreaClip` and choose `Calculate Geometry`. Set the Property to `Area` and click `OK`.  
 
-![location](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_24/19_AreaClip.png)
+![location](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_24/19_AreaClip.PNG)
 
 **Dividing the area of the clipped census tracts by their original area**  
 
@@ -269,7 +269,7 @@ Note: that proportional split estimation assumes that the attribute you are esti
 * Double-click `AreaClip`, Click `/` sign, and double-click `Area`. Your calculation should look like this: `[AreaClip]/[Area]` -- i.e. the proportion of the original area that remained after the clip.
 * Click `OK`  
 
-![location](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_24/20_FieldCalculator.png)
+![location](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/Images/Tutorial_24/20_FieldCalculator.PNG)
 
 **Multiplying the population by the proportion**
 
