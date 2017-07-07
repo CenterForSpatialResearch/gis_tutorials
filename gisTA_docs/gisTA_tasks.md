@@ -1,5 +1,35 @@
 ## Tasks for the GIS TA
 
+### Overview
+Your responsibilities includes the management of data on the X drive, including acquisition of new data and the maintenance and documentation of existing data, as well as providing assistance to GSAPP students and faculty in finding and using GIS data and software.
+
+The position requires a strong familiarity with the GIS data and GIS software. You are not expected to be an expert, but you should be able to assist with the most common tasks performed in GIS at GSAPP as well as be able to find and provide references for tasks and functions you are less-familiar with.
+
+The workload for the position varies throughout the semester, and you will have to find a balance between the short-term and long-term tasks. Typically, the beginning of the semester has a heavier workload, including workshops and studio data requests from professors. Following midterms, most students have completed their analytical work, so the need for GIS help diminishes.
+
+### Data to download and update (on to the X drive)
+* [Bytes of the Big Apple](https://www1.nyc.gov/site/planning/data-maps/open-data.page)
+  * Download all datasets to upload onto the X Drive
+  * [PLUTO Data](https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-pluto-mappluto.page) (download all PLUTO and MapPLUTO data yearly)
+* Other datasets
+	* https://data.cityofnewyork.us/widgets/dpc8-z3jc
+	* http://www1.nyc.gov/site/doitt/initiatives/3d-building.page
+	* https://data.cityofnewyork.us/Transportation/NYC-Planimetrics/wt4d-p43d
+* Specific data based on projects and accompanying studios.
+* Organize data by geography on the X drive.
+* Add data to master Excel File on the X drive.
+
+### Specific GIS workshops for studios
+* Pending request from faculty for specific studio workshops
+* Request desired focus or intention with spatial data or mappings in the studio
+
+### Write and update GIS tutorials
+* Create text documents (.md) of tutorials as a text document
+* Create a folder for images and key images within master folder
+* Include description before tutorials explaining what the tutorial will accomplish.
+* Include key image and description to be used on C4SR website
+* Push to Github [tutorial repository](https://github.com/CenterForSpatialResearch/gis_tutorials) and create entry in C4SR site
+
 ### GIS Workshops (Beginning of Each Semester)
 * Directly email specific faculty members announcing GIS Workshops (MArch, UD, HP)
 * Reserve and book room in 202 Fayerweather for GIS Workshops (email Stephanie Cha-Ramos sc3600@columbia.edu)
@@ -205,26 +235,3 @@ Questions can be directed to [GIS TA], ([your email]), the GIS student coordinat
     * click on map
     * zoom in to area
     * select resolution in download 1/9”
-
-### Data to download and update (on to the X drive)
-* [Bytes of the Big Apple](https://www1.nyc.gov/site/planning/data-maps/open-data.page)
-  * Download all datasets to upload onto the X Drive
-  * [PLUTO Data](https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-pluto-mappluto.page) (download all PLUTO and MapPLUTO data yearly)
-* Other datasets
-	* https://data.cityofnewyork.us/widgets/dpc8-z3jc
-	* http://www1.nyc.gov/site/doitt/initiatives/3d-building.page
-	* https://data.cityofnewyork.us/Transportation/NYC-Planimetrics/wt4d-p43d
-* Specific data based on projects and accompanying studios.
-* Organize data by geography on the X drive.
-* Add data to master Excel File on the X drive.
-
-### Specific GIS workshops for studios
-* Pending request from faculty for specific studio workshops
-* Request desired focus or intention with spatial data or mappings in the studio
-
-### Write and update GIS tutorials
-* Create text documents (.md) of tutorials as a text document
-* Create a folder for images and key images within master folder
-* Include description before tutorials explaining what the tutorial will accomplish.
-* Include key image and description to be used on C4SR website
-* Push to Github [tutorial repository](https://github.com/CenterForSpatialResearch/gis_tutorials) and create entry in C4SR site
