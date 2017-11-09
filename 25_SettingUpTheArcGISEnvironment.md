@@ -57,3 +57,7 @@ ArcCatalog, ArcToolbox and Search are powerful tools accessible from ArcMap. Cli
 ![t25-13.png](https://github.com/tolaoniyangi/gis_tutorials/blob/master/Images/Tutorial_25/t25-13.png)
 ![t25-14.png](https://github.com/tolaoniyangi/gis_tutorials/blob/master/Images/Tutorial_25/t25-14.png)
 ![t25-15.png](https://github.com/tolaoniyangi/gis_tutorials/blob/master/Images/Tutorial_25/t25-15.png)
+
+The 'Results' window is a handy tool to be aware of - you can view 'error messages' or 'warnings', see how long an operation takes, and rerun a tool from this window.
+![t25-16.png](https://github.com/tolaoniyangi/gis_tutorials/blob/master/Images/Tutorial_25/t25-16.png)
+![t25-17.png](https://github.com/tolaoniyangi/gis_tutorials/blob/master/Images/Tutorial_25/t25-17.png) 
