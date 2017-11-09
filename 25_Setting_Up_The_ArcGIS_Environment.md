@@ -23,7 +23,7 @@ A geodatabase can hold point, polygon and line information as well as attribute 
 As a rule of thumb, do not have spaces in any file or folder names pertaining to the project to avoid any errors.
 
 
-##Working with the X drive and ArcCatalog
+## Working with the X drive and ArcCatalog
 
 ArcCatalog only shows one file, instead of the collection of files that constitute a shapefile. Windows Explorer, on the other hand, shows all the files associated with each shapefile. To set a home folder for your project, click the 'connect to folder' button and select the folder(s) you will be using for your ArcMap project. Clicking the “launch ArcMap” button opens ArcMap with these connections already intact.
 

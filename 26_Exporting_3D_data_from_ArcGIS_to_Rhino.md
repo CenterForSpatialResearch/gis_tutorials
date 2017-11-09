@@ -29,7 +29,7 @@ You'll notice that the faces of the objects imported from ArcScene render incorr
 ![t26-9.png](https://github.com/tolaoniyangi/gis_tutorials/blob/master/Images/Tutorial_26/t26-9.png)
 
 
-## Importing with Z axis intact 
+## Importing with Z axis intact
 If the ArcScene layers have X, Y and Z axes, i.e. floating on a contour surface or particular z axis heights, you can still import them to Rhino at those heights. Refer to [this tutorial](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/09_Creating_A_3D_Site_Model_In_GIS.md) for help with this. Select 'feature to 3D by attribute' from 'Arctoolbox --> 3D Analyst Tools --> Feature to 3D by Attribute'. This essentially allows you to set the heights at which each feature is extruded from using a particular attribute.
 ![t26-10.png](https://github.com/tolaoniyangi/gis_tutorials/blob/master/Images/Tutorial_26/t26-10.png)
 
@@ -42,8 +42,8 @@ Afterwards, extrude to the heights of each feature by rightclicking on the layer
 After this, repeat the process of exporting 'layer 3D to feature class' and 'importing' to Rhino.
 
 
-## Exporting contour lines for Rhino 
+## Exporting contour lines for Rhino
 Select 'export to CAD' from 'Conversion Tools --> To CAD.' This tools let you export a layer or multiple layers to CAD, at which point you can then'import' to Rhino. The CAD file will already be 3D if its base heights were already set up in ArcScene.
 ![t26-13.png](https://github.com/tolaoniyangi/gis_tutorials/blob/master/Images/Tutorial_26/t26-13.png)
 ![t26-14.png](https://github.com/tolaoniyangi/gis_tutorials/blob/master/Images/Tutorial_26/t26-14.png)
-![t26-15.png](https://github.com/tolaoniyangi/gis_tutorials/blob/master/Images/Tutorial_26/t26-15s.png)
+![t26-15.png](https://github.com/tolaoniyangi/gis_tutorials/blob/master/Images/Tutorial_26/t26-15.png)
