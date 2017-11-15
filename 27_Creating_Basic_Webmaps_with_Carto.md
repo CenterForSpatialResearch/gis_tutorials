@@ -1,4 +1,4 @@
-# Creating Basic Webmaps with CartoDB 
+# Creating Basic Webmaps with Carto
 
 ## Getting Started 
 
