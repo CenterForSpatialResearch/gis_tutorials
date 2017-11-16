@@ -19,6 +19,7 @@ To isolate only pedestrian streets, we will first select all features with a 'bl
 ![t28-5.png](https://github.com/tolaoniyangi/gis_tutorials/blob/master/Images/Tutorial_28/t28-5.png)
 
 Next, we will add to our selection by changing the selection in the dropdown menu at the top of the attribute table to 'select from current selection'.
+
 ![t28-6.png](https://github.com/tolaoniyangi/gis_tutorials/blob/master/Images/Tutorial_28/t28-6.png)
 
 This time, we will be adding to our previous query. Click 'And', select 'NonPed' as the field and click 'Get Unique Values'. Finally, select '<>' and ''V'' to finish off the query. Basically, we are selecting streets that are accessible to pedestrians from our previous selection of all streets except non-street features. Finally, go through the same process to select street types that are NOT the ferry ( FeatureTyp <> 'F') from our current selection.Hit 'apply' and 'close'.
