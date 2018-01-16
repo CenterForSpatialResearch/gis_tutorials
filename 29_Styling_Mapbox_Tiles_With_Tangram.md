@@ -65,7 +65,7 @@ The two main differences are that in Mapzen the layer is called `roads` (with an
 
 Finally, as I said before, in Mapbox you need to add separate layers for the labels. These work similarly than other features but just need to be fully independent. Here is an example of a label layer for cities in **Mapbox**:
 ```yaml
-road_label:
+place_label:
   data: {source: mapbox}
   otherCities:
     filter:
