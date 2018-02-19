@@ -81,157 +81,251 @@ Questions can be directed to [GIS TA], ([your email]), the GIS student coordinat
 
 #### GIS Workshop Outline
 
-*Copy Folder to D Drive*
+*Copy Folder from X Drive to D Drive* 
 
 **Session 1:**
-* Brief GIS presentation (power point)
-  * What’s GIS?
-  * What is it for?
-  * Resources at GSAPP and Columbia (classes, labs, people)
-* Overview of the X drive, file types, and GSAPP Website.
-  * Data:
-    * X drive (brief explanation; go into further detail later)
-    * types of files (shapefiles, rasters)
-    * EDS at Lehman Library
-    * Other sources online
-  * Other resources on the GSAPP web site (tutorials, tips, C4SR, etc)
-* X drive.
-  * How to connect to the X drive
-  * Where is it
-  * What kind of data does it have
-  * How to use it
-* Different programs in ArcGIS.
-  * ArcCatalog
-	  * What is it
-	  * What does it look like
-	  * How to use it
-	  * Brief exercise copying files to the E drive
-  * ArcMap
-	  * What is it
-	  * What does it look like
-	  * How to use it
-	  * Different windows (data and layout)
-	  * Adding data
-	  * Moving layers
-	  * How to select data (by location and by attribute; adding to selection, new selection, etc)
-	  * “information” tool
-	  * Measurement tool
-  * Projections
-	  * Show slides on different projection types
-* Exercise 1 (creating a map)
-  * attribute table
-	  * opening
-	  * selecting
-  * properties
-	  * symbology
-	  * categories or quantities
-  * exporting (to illustrator or jpg)
-	  * layout view
-	  * dimensions of page
-	  * multiple data frame windows
-	  * scale
-	  * north arrow
-	  * how to change system of measurement
-	  * print or export (eps)
-  * export to CAD
-	  * ArcToolbox
-	  * export to CAD tool
-	  * import from CAD
-* Exercise 2 (selection techniques)
-  * projection systems (brief explanation)
-	  * arc help
-  * selecting
-	  * by location
-	  * interactive
-	  * removing from selection
-	  * selecting by graphics
-  * moving layers
-  * selecting with multiple layers
-	  * creating buffers
-	  * selecting by location
-	  * selecting by attributes
-* Exercise 3 (symbolizing, exporting and clipping)
-  * symbolizing
-	  * using the color ramp
-	  * changing the labels
-	  * changing the number of classes
-	  * classifying
-	  * normalization
-  * exporting data to new shapefile
-  * clipping
-	  * creating buffer
-	  * using the clip tool
-* Exercise 4 (attribute table operations)
-  * working with the attribute table
-	  * adding fields
-	  * editor tool
-	  * calculating geometry
-	  * joining new tables with existing data
-	  * aligning different coordinate systems
-	  * downloading census/American Community Survey data, and joining it with the appropriate shp files
-	  * 3d topography from point data, contour lines, or raster
 
-**Session 2:**
-* Web Site.
-  * Tutorials
-  * USGS site
-  * CUGIR
-* Exercise 1.
-  * ArcScene
-    * copy folder from the x drive (Arch GIS tutorial 2)
-    * open ArcScene
-    * add columbia_building_footprints
-    * navigation & navigation toolbar
-  * Extrusion
-    * extrude to building height
-    * fly command
-    * another way of calculating height
-  * Base Heights
-    * base height from attribute
-    * base height from surface
-* Exporting to Google Earth
-  * Xtools Pro
-    * open ArcMap
-    * add columbia_building_footprints
-    * load Xtools Pro
-    * export
-    * Import into Google Earth
-  * Import into Google Earth
-    * Change file extension type
-    * change extrusion conversion factor
-    * change display colors
-* Exporting 3D models from ArcScene
-  * ArcScene (exporting)
-    * add columbia_building_footprint
-    * extrude buildings
-    * export scene (3D)
-  * Rhino (importing)
-    * open Rhino
-    * import
-    * rotate
-    * explode, mesh to nurbs, join
-    * export as an .obj or as a .3ds
-  * Max (importing)
-    * open Max
-    * if .3ds you have to rotate
-* Topographic Surfaces
-  * new ArcScene map
-  * add file ned_xxxxxx
-  * properties/base height/obtain heights from layer
-  * factor x2
-  * symbology (change color)
-  * problems exporting
-* How to get topographic files
-  * CUGIR
-    * go to web site
-    * type topographic
-    * select 7.5 minutes
-    * select by map
-    * select map and download the DEM file
-    * unzip
-    * in ArcMap go to toolbox/conversion/to raster/DEM to raster
-  * USGS
-    * go to web site
-    * click on map
-    * zoom in to area
-    * select resolution in download 1/9”
+*Powerpoint presentation on GIS
+  * What is GIS/what can you do with it?
+  * What is it used for? 
+  * Resources at GSAPP and Columbia for GIS
+    * Demo of tutorials on CSR website
+  * Working with GIS:
+    * Types of files - raster vs vector
+    * What is a shapefile? What is a geodatabase?
+    * Projections - what it is and why it's so important
+      * show slides of NYC projected in different projections + compare to regular one
+
+* Overview of the X drive
+  * What it is + what type of data is on there
+  * Demo of how to get to the X drive and where to find data on there
+  * Where else can you find data online?
+    * Show American Community Survey, Bytes of the Big Apple, NYC Open Data
+
+* Programs
+  * Demo of using ArcCatalog
+    * Interface + how to use it
+    * Copy files for the tutorial from the X drive
+  * Demo of using ArcMap
+    * Interface
+      * Also show how to get to ArcCatalog from here
+      * ArcToolbox
+      * Search
+    * Data vs Layout window
+      * go to properties for layout window to show how you can change page
+      * sizes + for data frame to show coordinate system
+
+-----------WORKSHOP----------------------------
+
+**Part 1: Making a 2D model of Morningside Heights**
+
+  * Exercise 1 - creating and exporting a basic site plan
+    * Open ArcMap - set Default Geodatabase
+    * Add Data - connect to local folder - data = borough boundaries, water, green space
+      * Brief note on projections and how the first file you put in sets the coordinate system for the data frame project parks from WGS84 to NAD83
+      * Change data frame coordinate system to WGS84 so they see the difference 
+      * Mention that NAD83 is NYC projection and WGS84 is general GPS one
+    * More on interface:
+      * selection, information, measurement tools. also selecting interactively and by polygon, etc (from toolbar), remove from selection
+      * Moving layers
+      * Right-clicking on layer to get layer properties (in source here, you can see the projection i.e. the map's units)
+    * Attribute table:
+      * open the borough boundaries attribute table and go super briefly into what it is, what data it contains.
+      * select interactively from attribute table and from the data frame
+
+    * Add Data - building footprints
+      _note how the buildings load slowly - file is huge_
+    * Symbology:
+      * Just change colors, etc of the map to make it look decent
+      * Now open the attribute table for building footprints and explore what you have on there
+        * Metadata: Go to the nyc open data link and look at the metadata to figure out what all the fields mean
+      * Go back to layer properties and the symbology tab -
+        _[I show the below and tell people to symbolize how they want]_
+        * Symbolize by category: any qualitative data (building type)
+          * Subtype Feature Code
+          * Building  2100
+          * Sky Bridge  2110
+          * Building Under Construction 5100
+          * Garage  5110)
+        * Symbolize by quantity: any quantitative data (year of building construction)
+          * Using the color ramp
+          * Changing labels
+          * Changing number of classes
+          * Different types of classification
+          * Normalizing
+
+  * Exercise 2 - selection techniques
+    * Add Data - Neighborhood Tabulation Areas.
+    * Select and export only Morningside Heights buildings in two ways:
+        * Export only Morningside Heights NTA from nynta
+          * Select by Location - intersect with Morningside Heights NTA & then export
+          * Clip buildings to Morningside Heights NTA & then export
+
+    * Export map to illustrator or JPG
+      * Back to layout view
+      * Create bookmark
+      * Add scale + north arrow
+      * Show how to change scale unit
+      * Create locator map focusing on Morningside Heights within NYC
+      * Export to AI 
+      * Print to PDF 
+    * Export to CAD
+      * Right click layer --> data --> Export to CAD 
+      * ArcToolbox --> conversion tools --> CAD --> export to CAD
+      * also show Import from CAD in same place
+
+  * Exercise 3 - Attribute Table Operations
+      * Open attribute table of Morningside Heights buildings layer
+        _Talk about how GIS is so cool bc it links attribute info to spatial info - powerful for analysis, etc_
+      * Add "double" field - talk about diff between double, string, long, and so on
+      * Calculate geometry - area [in feet]
+      * Editor tool - brief demonstration
+      _Flag field calculator here as a powerful too, but say tutorials are online_  
+
+      * Add Data - NYC population by NTA csv
+        _Mention that csv is preferred to excel for joining_
+      * Join to total NTA file based on NTAcode field
+        _Mention that join has to be based on a unique field common to
+        both files in same type_
+        * Show common error with non-matching types and how to fix it
+        * Open attribute table and show the new data in the NTA file
+      * Export data
+        _Mention you have to export so it's permanently joined_
+      * Save
+
+  * Exercise 4 - Working from tabular data to geographic
+
+      * Add Data - library csv
+      * Right-click on layer --> data --> display XY data
+        _mention how it's opposite so the x field is the longitude and the y field is the latitude_
+
+      * Make a buffer quarter-mile from libraries [to see what areas have more access].
+        _here, use the "show help" tool to explain dissolve_
+      * Alternative way if you just want the features in a zone:
+        * Select by location - select buildings within quarter mile from subway stations
+
+**Part 2:Making a 3D site model of Morningside Heights**
+
+  * Exercise 1 - 3D Topography of Morningside Heights from point data, contour lines or raster (for UD only-arcMap)
+    
+    * point to raster
+      * Add "morningside elevation points" shapefile [no need to select & export because that was covered in the 2D workshop]
+      * Look at metadata on NYC open data portal --> spot elevation has a feature code of 300000
+      * Open attribute table, select by attribute [sub_code = 300000].
+      * Export data --> exporting only points in Morningside heights with spot elevation data
+
+      * Customize --> Extensions --> 3D Analyst + Spatial Analyst
+
+      * ArcToolbox --> Spatial Analyst Tool --> Interpolation --> Topo to Raster
+        * Change field to elevation and type to point elevation [beside layer name]        
+        * Change "primary type of input data" from contour to spot
+        * Save as "topo_columbia"
+      * Change symbology of raster from classified to stretched
+
+    * raster to contour
+      * Customize --> Extensions --> 3D Analyst
+      * ArcToolbox --> 3D Analyst --> Raster Surface --> Contour
+        * Name "morningsideContour_2ft"
+          * Set contour interval as 2 (we already know the unit is feet because of the coordinate system)
+          * Z factor remains 1 because we are working with a file in feet and generating the contour in feet. If working with a file in meters and generating the contour in feet, 0.3048 is Z-factor
+
+    * 2D contour lines to 3D geometry
+      * ArcToolbox --> 3D Analyst --> 3D Features --> Feature to 3D byattribute
+      * Input --> morningsideContour_2ft
+        * Output --> morningsideContour_2ft_3D.shp
+        * height field --> CONTOUR
+
+      * Looks 2D still on there, but if you export to CAD and open in Rhino or AutoCAD it'll be 3D / placed on Z-axis
+
+  * Exercise 2 - making and exporting a basic 3D model with building heights (ArcScene)
+
+    * Open ArcScene
+    * Interface
+      * Set observer
+      * Rotate
+      * Set target
+    * Add Data[from previous exercise]- buildings_MorningsideHeights
+    * Extrude building heights
+      * Properties --> extrude --> extrusion value: [heightroof]--> add to each feature's minimum height
+      _If building heights are insane, check arcScene units is in feet by going to `View` --> `Scene Properties`_
+      _Customize --> arcscene properties --> coordinate systems_
+    * Check model units --> using coordinate system
+    * "Fly" through buildings
+    _Mention that you can download multipatch files which already have 3D info from DCP_
+    * Export scene (3D)
+      * Enable Data Interoperability & 3D analyst extension (Customize --> Extensions)
+      * ArcCatalog --> 3D Analyst --> Conversion --> Layer 3D to Feature Class
+      * ArcCatalog --> Data Interoperability --> Quick Export 
+        * File type = Autodesk 3DS
+    * Open Rhino
+      * Change units to feet (to match model)
+      * Import file
+      * Rotate bc it imports at 90 degree angle
+      * Mention that if you want to edit the file, its gonna be huge/slow BUT its possible.
+      * Explode --> MeshToNURB
+        * Make Edits
+      * Join
+      * Save
+    _Mention that you can also export to Google Earth - tutorial on csr website_
+
+  * Exercise 3 - Working with topographic surfaces
+
+    * creating the topographic surfaces         
+      * Add topoMorningsideHeights.tif (columbia geotiff file [the raster we made from elevation points at the end of 2D session]
+      * Change base heights through elevation from surface
+        * Base heights
+          * Floating on a custom surface: the tif file
+      * Add morningsideContour_2ft [make this 3D]
+        * Base heights  
+          * no elevation values from surface
+          * use a constant value or expression [CONTOUR]
+      * BUT if you add the morningsideContour_2ft_3D, it automatically gives the heights (done via feature to 3d by attributes)
+
+      * Make a TIN (triangulated irregular network) to represent 3D surfaces as contiguous, non-overlapping contours
+        * ArcToolbox --> 3D Analyst tools --> Data management --> TIN -->
+        * createTIN
+          * Set coordinate system & destination of file
+          * Height field = CONTOUR
+          * (surface) type = soft line (for a gradual break in slope)
+          * ok
+        * Properties --> uncheck edge types to hide lines
+        * Can change symbology to show themes.In symbology, click "add" button
+        _people can play around here with showing percentage slope, elevation, etc_
+
+    * draping roads, buildings, etc on TIN
+      * Add lionMorningsideHeights shapefile
+      * For properties of the roads and buildings shapefiles -->
+        * Base heights
+          * Floating on a custom surface: TIN layer
+
+    * draping an orthoimg on TIN 
+      * Add raster image (TIF) to arcScene
+      * Select YES to build pyramids so it loads faster
+      * Properties -->
+        * Base heights
+          * Floating on a custom surface: TIN layer
+
+    * Export scene with Z axis intact (3D)
+      * Arctoolbox --> 3D Analyst Tools --> Feature to 3D by Attribute
+        * Height field = groundelevation (z axis) bc this is what the buildings will be floating on
+      * Then extrude 
+      * ArcCatalog --> 3D Analyst --> Conversion --> Layer 3D to Feature Class
+      * ArcCatalog --> Data Interoperability --> Quick Export 
+        * File type = Autodesk 3DS
+
+    _download files on the X drive prior to this_
+
+  * USGS & CUGIR site - show how to get data from here and what they are used for
+    * cugir.lubrary.cornell.edu
+    * earthexplorer.usgs.gov
+  * Show CSR tutorials 
+
+    * working with topo from CUGIR/USGS
+      * add CUGIR 7.5 minutes topographic file - DEM
+        * Properties -->
+          * Base heights
+            * Floating on a custom surface
+      * add USGS landsat file
+        * Properties -->
+          * Base heights
+            * Floating on a custom surface
