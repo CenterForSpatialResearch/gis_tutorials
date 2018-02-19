@@ -1,6 +1,6 @@
 # Exporting 3D Data and Importing in Rhino and 3DS Max
 
-_Note that this tutorial works in ArcGIS version 10.4.1.5686. For version 10.5.1.7333, see this [tutorial](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/26_Exporting_3D_data_from_ArcGIS_to_Rhino.md) instead. _
+_Note that this tutorial works in ArcGIS version 10.4.1.5686. For version 10.5.1.7333 (which is on GSAPP computers), see this [tutorial](https://github.com/CenterForSpatialResearch/gis_tutorials/blob/master/26_Exporting_3D_data_from_ArcGIS_to_Rhino.md) instead. _
 
 Below are instructions on how to import 3D data from ArcScene into Rhino and 3DS Max. This tutorial uses the following datasets:
 * [Building footprints](https://data.cityofnewyork.us/Housing-Development/Building-Footprints/nqwf-w8eh)
